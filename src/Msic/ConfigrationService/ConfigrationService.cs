@@ -1,5 +1,4 @@
-﻿using UIShell.OSGi;
-using AddinEngine;
+﻿using AddinEngine;
 using System;
 using System.Configuration;
 using System.Linq;
@@ -11,16 +10,14 @@ namespace CommonLibrary
 {
     public class ConfigurationService : IConfigurationService
     {
+        private static IConfigurationService service;
         public static IConfigurationService Instance
         {
             get
             {
-
-                var service = BundleActivatorBase.GetService<IConfigurationService>();
                 if (service.IsNull())
                 {
                     service = new ConfigurationService();
-                    BundleRuntime.Instance.AddService<IConfigurationService>(service);
                 }
                 return service;
             }
@@ -149,6 +146,8 @@ namespace CommonLibrary
 
         public static string DefaultName = "Default";
         List<string> allconfigs = new List<string>();
+
+
         IEnumerable<string> IConfigurationService.AllConfigs
         {
             get 

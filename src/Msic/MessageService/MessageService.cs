@@ -1,9 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Windows.Documents;
-using UIShell.OSGi;
 using AddinEngine;
-using UIShell.OSGi.Logging;
 using System;
 using CommonExtension;
 
@@ -30,8 +26,6 @@ namespace CommonLibrary
                 if (service.IsNull())
                 {
                     service = new MessageService();
-                    BundleRuntime.Instance.AddService<IMessageService>(service);
-                    BundleRuntime.Instance.AddService<IMessageProvider>(service);
                 }
                 return service;
             }

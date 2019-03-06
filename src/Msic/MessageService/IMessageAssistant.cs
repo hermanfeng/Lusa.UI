@@ -1,8 +1,4 @@
 ﻿using System.Collections.Generic;
-using UIShell.OSGi;
-using AddinEngine;
-using System;
-using System.Linq;
 
 namespace CommonLibrary
 {

@@ -119,8 +119,8 @@
       <Name>Lusa.AddinEngine</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\Msic\Lusa.UI.Msic.csproj">
-      <Project>{9DE99705-50E4-4E8B-8983-BA95BCCEE1AD}</Project>
+    <ProjectReference Include="..\..\..\Msic\Lusa.UI.Msic.csproj">
+      <Project>{9de99705-50e4-4e8b-8983-ba95bccee1ad}</Project>
       <Name>Lusa.UI.Msic</Name>
       <Private>False</Private>
     </ProjectReference>

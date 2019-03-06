@@ -1,9 +1,5 @@
-﻿using System.Collections.Generic;
-using CommonExtension;
-using UIShell.OSGi;
-using AddinEngine;
+﻿using CommonExtension;
 using System;
-using System.Linq;
 using System.Windows.Media;
 
 namespace CommonLibrary

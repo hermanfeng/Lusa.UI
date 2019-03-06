@@ -1,9 +1,4 @@
-﻿using System.IO;
-using System.Security.Cryptography;
-using System.Text;
-using UIShell.OSGi;
-using AddinEngine;
-using CommonExtension;
+﻿using CommonExtension;
 using System;
 using System.Diagnostics;
 

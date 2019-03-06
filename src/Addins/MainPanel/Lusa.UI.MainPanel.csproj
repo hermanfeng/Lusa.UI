@@ -37,21 +37,27 @@
   <ItemGroup>
     <Reference Include="InfragisticsWPF4.Controls.Editors.XamRichTextEditor.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Controls.Editors.XamRichTextEditor.v15.2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="InfragisticsWPF4.Controls.Menus.XamMenu.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Controls.Menus.XamMenu.v15.2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="InfragisticsWPF4.Documents.Core.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Documents.Core.v15.2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="InfragisticsWPF4.Documents.RichTextDocument.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Documents.RichTextDocument.v15.2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="InfragisticsWPF4.Undo.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Undo.v15.2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="InfragisticsWPF4.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.v15.2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -285,7 +291,7 @@
       <Name>Lusa.AddinEngine</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\Msic\Lusa.UI.Msic.csproj">
+    <ProjectReference Include="..\..\Msic\Lusa.UI.Msic.csproj">
       <Project>{9de99705-50e4-4e8b-8983-ba95bccee1ad}</Project>
       <Name>Lusa.UI.Msic</Name>
       <Private>False</Private>

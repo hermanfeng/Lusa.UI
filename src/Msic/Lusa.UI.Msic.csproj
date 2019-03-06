@@ -48,16 +48,11 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="UIShell.OSGi">
-      <HintPath>..\..\Lib\UIShell\UIShell.OSGi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activator.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="ConfigrationService\ConfigrationService.cs" />
     <Compile Include="ConfigrationService\IConfigrationServiceExtension.cs" />
@@ -102,23 +97,16 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AddinCore\Lusa.AddinEngine.csproj">
+    <ProjectReference Include="..\AddinCore\Lusa.AddinEngine.csproj">
       <Project>{6BD9BD94-AEF1-4F2B-B15C-54623DDEBAD6}</Project>
       <Name>Lusa.AddinEngine</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Manifest.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>set localPath="$(SolutionDir)src\bin\Plugins\Msic"
-mkdir "%25localPath%25\bin\" 
-xcopy /y /D "$(TargetDir)*" "%25localPath%25\bin\"
-move /y "%25localPath%25\bin\Manifest.xml" "%25localPath%25"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
