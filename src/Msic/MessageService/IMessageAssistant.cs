@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using Lusa.UI.Msic.MessageService.MessageObject;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.MessageService
 {
     public interface IMessageAssistant : IMessageClickAssistant
     {
-        IEnumerable<MessageRange> GetAllMessageRanges(MessageObject msg);
+        IEnumerable<MessageRange> GetAllMessageRanges(MessageObject.MessageObject msg);
     }
 
     public interface IMessageClickAssistant

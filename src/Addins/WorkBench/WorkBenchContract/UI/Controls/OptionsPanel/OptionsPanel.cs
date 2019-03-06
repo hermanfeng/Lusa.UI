@@ -6,7 +6,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Controls.OptionsPanel
 {
     /// <summary>
     /// Represents a panel control that can be drag within its parent control's boundaries. 

@@ -1,4 +1,4 @@
-﻿namespace WorkBenchContract
+﻿namespace Lusa.UI.WorkBenchContract.UI.Controls.Menu
 {
     public abstract class MenuDescriptorProvider<T> : IMenuDescriptorProvider<T>
     {

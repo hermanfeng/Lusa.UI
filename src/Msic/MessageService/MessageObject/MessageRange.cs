@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using CommonExtension;
 using System.Linq;
+using Lusa.AddinEngine.Extension;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.MessageService.MessageObject
 {
     public class MessageRange
     {

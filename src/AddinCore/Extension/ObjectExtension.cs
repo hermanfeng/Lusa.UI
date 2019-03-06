@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace CommonExtension
+namespace Lusa.AddinEngine.Extension
 {
     public static class ObjectExtension
     {

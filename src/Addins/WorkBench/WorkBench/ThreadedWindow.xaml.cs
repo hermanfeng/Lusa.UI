@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Media.Imaging;
 
-namespace WorkBench
+namespace Lusa.UI.WorkBench
 {
     public partial class WorkBenchMainWindow : Window
     {

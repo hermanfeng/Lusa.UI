@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Input;
-using CommonExtension;
-using CommonLibrary;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.Msic.ViewModelBase;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Controls.Menu
 {
     public class MenuItemDescriptor : ViewModelBase
     {

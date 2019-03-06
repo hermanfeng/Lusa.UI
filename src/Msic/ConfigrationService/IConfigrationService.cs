@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.ConfigrationService
 {
     public interface IConfigurationService
     {

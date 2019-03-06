@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
-namespace CommonExtension
+namespace Lusa.AddinEngine.Extension
 {
     public static class TaskExtension
     {

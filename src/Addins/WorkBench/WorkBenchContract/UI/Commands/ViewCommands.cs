@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Commands
 {
     public class ViewCommands
     {

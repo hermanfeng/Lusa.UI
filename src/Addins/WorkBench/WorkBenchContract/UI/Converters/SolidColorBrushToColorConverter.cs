@@ -1,7 +1,7 @@
 ﻿using System.Windows.Data;
 using System.Windows.Media;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Converters
 {
     public class SolidColorBrushToColorConverter : IValueConverter
     {

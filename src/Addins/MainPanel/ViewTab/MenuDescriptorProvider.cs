@@ -1,12 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Windows;
-using AddinEngine;
-using UIShell.OSGi;
-using System.Linq;
-using System.Collections.Specialized;
-using WorkBenchContract;
+﻿using Lusa.UI.WorkBenchContract.UI.Controls.Menu;
 
-namespace MainPanelPlugin
+namespace Lusa.UI.MainPanel.ViewTab
 {
     public class DefaultMenuItemDescriptorProvider : MenuDescriptorProvider<MenuItemDescriptor>
     {

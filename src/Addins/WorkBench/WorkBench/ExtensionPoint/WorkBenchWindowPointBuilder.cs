@@ -1,8 +1,7 @@
-﻿using System.Windows;
-using UIShell.OSGi;
-using WorkBenchContract;
+﻿using Lusa.AddinEngine.ExtendsionPoint;
+using Lusa.UI.WorkBenchContract;
 
-namespace AddinEngine
+namespace Lusa.UI.WorkBench.ExtensionPoint
 {
     public class WorkBenchWindowPointBuilder : ClassPointBuilder<IWorkBenchWindowProvider>
     {

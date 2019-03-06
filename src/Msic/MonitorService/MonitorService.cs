@@ -1,8 +1,9 @@
-﻿using CommonExtension;
-using System;
+﻿using System;
 using System.Diagnostics;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.Msic.MessageService;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.MonitorService
 {
     public class MonitorService
     {
@@ -26,13 +27,13 @@ namespace CommonLibrary
             {
                 methodName = methodName.IsNullOrEmpty() ? action.Method.Name : methodName;
                 Stopwatch st = new Stopwatch();
-                MessageService.Instance.SendMessage("Method named " + methodName + " begins to start.");
+                MessageService.MessageService.Instance.SendMessage("Method named " + methodName + " begins to start.");
                 st.Start();
 
                 action();
 
                 st.Stop();
-                MessageService.Instance.SendMessage("Method named "+methodName +" ends with taking "+ st.ElapsedMilliseconds +" ms.");
+                MessageService.MessageService.Instance.SendMessage("Method named "+methodName +" ends with taking "+ st.ElapsedMilliseconds +" ms.");
                 return st.Elapsed;
             }
             return TimeSpan.Zero;
@@ -44,13 +45,13 @@ namespace CommonLibrary
             {
                 methodName = methodName.IsNullOrEmpty() ? action.Method.Name : methodName;
                 Stopwatch st = new Stopwatch();
-                MessageService.Instance.SendMessage("Method named " + methodName + " begins to start.");
+                MessageService.MessageService.Instance.SendMessage("Method named " + methodName + " begins to start.");
                 st.Start();
 
                 T result = action();
 
                 st.Stop();
-                MessageService.Instance.SendMessage("Method named " + methodName + " ends with taking " + st.ElapsedMilliseconds + " ms.");
+                MessageService.MessageService.Instance.SendMessage("Method named " + methodName + " ends with taking " + st.ElapsedMilliseconds + " ms.");
                 return Tuple.Create(result,st.Elapsed);
             }
             return Tuple.Create(default(T),TimeSpan.Zero);

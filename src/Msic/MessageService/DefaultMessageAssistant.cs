@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using Lusa.UI.Msic.MessageService.MessageObject;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.MessageService
 {
     public class DefaultMessageAssistant : IMessageAssistant
     {
@@ -25,7 +26,7 @@ namespace CommonLibrary
         }
 
 
-        IEnumerable<MessageRange> IMessageAssistant.GetAllMessageRanges(MessageObject msg)
+        IEnumerable<MessageRange> IMessageAssistant.GetAllMessageRanges(MessageObject.MessageObject msg)
         {
             return GetAllMessageRangesCore(msg);
         }
@@ -44,7 +45,7 @@ namespace CommonLibrary
             return false;
         }
 
-        protected virtual IEnumerable<MessageRange> GetAllMessageRangesCore(MessageObject msg)
+        protected virtual IEnumerable<MessageRange> GetAllMessageRangesCore(MessageObject.MessageObject msg)
         {
             return MessageRange.FromMessage(msg, _linkMsg);
         }

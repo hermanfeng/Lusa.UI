@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CommonExtension
+namespace Lusa.AddinEngine.Extension
 {
     public static class StringExtension
     {

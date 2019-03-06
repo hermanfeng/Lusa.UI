@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Input;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Converters
 {
     public class ModifierKeysConverter : IValueConverter
     {

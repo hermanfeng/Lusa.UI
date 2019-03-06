@@ -1,4 +1,4 @@
-﻿namespace AddinEngine
+﻿namespace Lusa.AddinEngine.ExtensionData
 {
     public interface IExtensionDataProvider
     {

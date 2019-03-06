@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Windows.Controls;
-using System.Windows.Input;
-using System.Xml.Serialization;
-using CommonLibrary;
-using AddinEngine;
-using CommonExtension;
+﻿using Lusa.AddinEngine.Extension;
+using Lusa.UI.Msic.ViewModelBase;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Controls.Menu
 {
     public class MenuGroupDescriptor : ViewModelBase
     {

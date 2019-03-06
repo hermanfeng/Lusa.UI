@@ -1,6 +1,6 @@
-﻿using WorkBenchContract;
+﻿using Lusa.UI.WorkBenchContract.UI.Controls.Menu;
 
-namespace MainPanelPlugin
+namespace Lusa.UI.MainPanel.ViewTab.View
 {
     public class PanViewsItemProvider : DefaultMenuItemDescriptorProvider
     {

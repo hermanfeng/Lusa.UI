@@ -1,14 +1,6 @@
-﻿using System.Runtime.Remoting.Messaging;
-using System.Security.RightsManagement;
-using CommonLibrary;
-using MainPanelPlugin.View;
-using UIShell.OSGi;
-using AddinEngine;
-using WorkBenchContract;
-
-namespace MainPanelPlugin
+﻿namespace Lusa.UI.MainPanel.StatusBarItem
 {
-    public class ProgressStatusBarItem : StatusBarItem
+    public class ProgressStatusBarItem : WorkBenchContract.ExtensionPoint.StatusBarItem
     {
         public ProgressStatusBarItem()
         {

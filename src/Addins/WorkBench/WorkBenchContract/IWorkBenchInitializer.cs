@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract
 {
     public interface IWorkBenchInitializer
     {

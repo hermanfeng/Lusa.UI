@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Converters
 {
     /// <summary>
     /// Converts duration represented in milliseconds to TimeSpan object

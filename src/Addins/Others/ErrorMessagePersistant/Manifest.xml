@@ -2,7 +2,6 @@
 <Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="Lusa.UI.ErrorMessagePersistant" SymbolicName="Lusa.UI.ErrorMessagePersistant" Version="1.0.0.0" InitializedState="Active">
   <Activator Type="ErrorMessagePersistant.Activator" Policy="Immediate" />
   <Runtime>
-    <Assembly Path="bin\ErrorMessagePersistant.dll" Share="false" MultipleVersions="false" />
   </Runtime>
   <Extension Point="UIShell.WpfShellPlugin.LinkGroups">
     <LinkGroup DisplayName="ErrorMessagePersistant" DefaultContentSource="ErrorMessagePersistant.UserControl1">

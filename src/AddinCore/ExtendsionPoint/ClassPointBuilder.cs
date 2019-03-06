@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using UIShell.OSGi;
-using System.Windows.Data;
-using System.Windows.Media;
 using System.Xml;
-using System.Xml.Linq;
-using System.Reflection;
+using UIShell.OSGi;
 
-namespace AddinEngine
+namespace Lusa.AddinEngine.ExtendsionPoint
 {
     public abstract class ClassPointBuilder<T> : ExtensionPointBuilderBase<T> where T : class
     {
@@ -30,7 +21,7 @@ namespace AddinEngine
             return node.Name.Equals("instance", StringComparison.InvariantCultureIgnoreCase);
         }
 
-        protected override T CreateInstance(XmlNode subnode, Extension extension)
+        protected override T CreateInstance(XmlNode subnode, UIShell.OSGi.Extension extension)
         {
             if (subnode.Attributes["class"] != null)
             {

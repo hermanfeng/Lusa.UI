@@ -1,4 +1,4 @@
-﻿namespace WorkBenchContract
+﻿namespace Lusa.UI.WorkBenchContract.UI.Controls.Pane
 {
     public interface IPaneViewDescriptorProvider
     {

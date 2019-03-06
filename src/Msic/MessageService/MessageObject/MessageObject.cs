@@ -1,8 +1,8 @@
-﻿using AddinEngine;
-using System;
+﻿using System;
 using System.Windows.Media;
+using Lusa.AddinEngine.ExtensionData;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.MessageService.MessageObject
 {
     public class MessageObject:ExtensionDatas
     {

@@ -1,7 +1,7 @@
-﻿using System.IO;
-using System;
+﻿using System;
+using System.IO;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.FileService
 {
     public class FileService
     {

@@ -1,6 +1,7 @@
-﻿using AddinEngine;
+﻿using Lusa.AddinEngine.ExtendsionPoint;
+using Lusa.UI.WorkBenchContract.UI.Controls.Pane;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.ExtensionPoint
 
 {
     public class PaneViewPointBulder : ClassPointBuilder<IPaneViewDescriptorProvider>

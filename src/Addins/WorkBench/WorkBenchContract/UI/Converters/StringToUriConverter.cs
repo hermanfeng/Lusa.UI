@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Data;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Converters
 {
     public class StringToUriConverter : IValueConverter
     {

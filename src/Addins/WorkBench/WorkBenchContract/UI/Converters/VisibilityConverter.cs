@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Converters
 {
     public class VisibilityConverter : IValueConverter
     {

@@ -1,4 +1,4 @@
-﻿namespace WorkBenchContract
+﻿namespace Lusa.UI.WorkBenchContract
 {
     public interface IUniqueObject
     {

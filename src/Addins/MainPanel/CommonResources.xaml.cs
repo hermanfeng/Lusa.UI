@@ -1,6 +1,4 @@
-﻿using System.Windows;
-
-namespace MainPanelPlugin
+﻿namespace Lusa.UI.MainPanel
 {
     /// <summary>
     /// CommonResources.xaml 的交互逻辑

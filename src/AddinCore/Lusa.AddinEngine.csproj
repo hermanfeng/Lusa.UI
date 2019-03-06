@@ -42,15 +42,6 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CacheManager.Serialization.Json">
-      <HintPath>..\..\..\DocumentEngine\SWATTools\Addins\PaneViews\FormGraphViewer\CacheLibrary\CacheManager.Serialization.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="CacheManager.SystemRuntimeCaching">
-      <HintPath>..\..\..\DocumentEngine\SWATTools\Addins\PaneViews\FormGraphViewer\CacheLibrary\CacheManager.SystemRuntimeCaching.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Engine">
-      <HintPath>..\..\..\DocumentEngine\SWATTools\Addins\Library\Common.Engine.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -65,9 +56,6 @@
       <HintPath>..\Lib\UIShell\UIShell.OSGi.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddinEngineHost.cs" />

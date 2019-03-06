@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using AddinEngine;
+using Lusa.AddinEngine.ExtensionData;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.ViewModelBase
 {
     /// <summary>
     /// A base class for the ViewModel classes in the MVVM pattern.

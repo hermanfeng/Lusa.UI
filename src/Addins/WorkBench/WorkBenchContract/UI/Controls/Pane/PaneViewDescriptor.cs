@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Xml.Serialization;
-using AddinEngine;
-using CommonExtension;
+using Lusa.AddinEngine.Extension;
+using Lusa.AddinEngine.ExtensionData;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Controls.Pane
 {
     public class PaneViewDescriptor : ExtensionDatas
     {

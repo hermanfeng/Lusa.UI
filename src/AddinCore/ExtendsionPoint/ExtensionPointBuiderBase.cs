@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using UIShell.OSGi;
 using System.Xml;
-using System.Reflection;
-using System.Windows.Data;
-using System.Windows.Markup;
+using Lusa.AddinEngine.ElementOrder;
+using UIShell.OSGi;
 using UIShell.OSGi.Core.Service;
 
-namespace AddinEngine
+namespace Lusa.AddinEngine.ExtendsionPoint
 {
     public abstract class ExtensionPointBuilderBase<T> where T : class
     {
@@ -26,7 +21,7 @@ namespace AddinEngine
         {
         }
 
-        private IEnumerable<Extension> GetExtendsions()
+        private IEnumerable<UIShell.OSGi.Extension> GetExtendsions()
         {
             if (Bundle != null && bundle.Context != null)
             {
@@ -40,7 +35,7 @@ namespace AddinEngine
                     return manager.GetExtensions(ExensionPoint);
                 }
             }
-            return new List<Extension>();
+            return new List<UIShell.OSGi.Extension>();
         }
 
         public IBundle Bundle
@@ -57,7 +52,7 @@ namespace AddinEngine
         {
             var list = new BuildItemCollection<T>(this);
             var exts = GetExtendsions();
-            foreach (Extension ext in exts)
+            foreach (UIShell.OSGi.Extension ext in exts)
             {
                 foreach (XmlNode dataNode in ext.Data)
                 {
@@ -79,18 +74,18 @@ namespace AddinEngine
             return list;
         }
 
-        protected T BuildItem(XmlNode node, Extension extension)
+        protected T BuildItem(XmlNode node, UIShell.OSGi.Extension extension)
         {
             T instance = CreateInstance(node, extension);
             return instance;
         }
 
 
-        public void Initialize(T instance, Extension extension)
+        public void Initialize(T instance, UIShell.OSGi.Extension extension)
         {
             InitializeCore(instance, extension);
         }
-        protected virtual void InitializeCore(T instance, Extension extension)
+        protected virtual void InitializeCore(T instance, UIShell.OSGi.Extension extension)
         {
             
         }
@@ -117,7 +112,7 @@ namespace AddinEngine
             return node.Name.Equals(KeyWordType.Name, StringComparison.InvariantCultureIgnoreCase);
         }
 
-        protected virtual T CreateInstance(XmlNode subnode, Extension extension)
+        protected virtual T CreateInstance(XmlNode subnode, UIShell.OSGi.Extension extension)
         {
             try
             {
@@ -134,7 +129,7 @@ namespace AddinEngine
 
     }
 
-    public class BuildItemCollection<T>:Dictionary<T,Extension> where T : class
+    public class BuildItemCollection<T>:Dictionary<T,UIShell.OSGi.Extension> where T : class
     {
         ExtensionPointBuilderBase<T> builder;
         public BuildItemCollection(ExtensionPointBuilderBase<T> builder)
@@ -150,7 +145,7 @@ namespace AddinEngine
                 initialized = true;
                 foreach(T instance in this.Keys)
                 {
-                    Extension extension = this[instance];
+                    UIShell.OSGi.Extension extension = this[instance];
                     InitializeCore(instance, extension);
                     builder.Initialize(instance, extension);
                 }
@@ -166,7 +161,7 @@ namespace AddinEngine
             return arg;
         }
 
-        protected virtual void InitializeCore(T instance, Extension extension)
+        protected virtual void InitializeCore(T instance, UIShell.OSGi.Extension extension)
         {
             var ini = instance as IExtensionInitializer<T>;
             if (ini != null && builder!=null)

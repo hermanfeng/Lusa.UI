@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
-using CommonLibrary;
-using CommonExtension;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.Msic.MessageService;
 
-namespace CommonExtension
+namespace Lusa.UI.WorkBenchContract.Extension
 {
     public static class DependencyObjectExtension
     {

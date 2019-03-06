@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace AddinEngine
+namespace Lusa.AddinEngine.ElementOrder
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class ElementOrderAttribute :Attribute

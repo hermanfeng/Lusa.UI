@@ -1,7 +1,8 @@
-﻿using AddinEngine;
-using WorkBenchContract;
+﻿using Lusa.AddinEngine.ElementOrder;
+using Lusa.UI.WorkBenchContract.UI.Commands;
+using Lusa.UI.WorkBenchContract.UI.Controls.Menu;
 
-namespace MainPanelPlugin
+namespace Lusa.UI.MainPanel.ViewTab.Layout
 {
     [ElementOrder(20)]
     public class LoadLayoutItemProvider : DefaultMenuItemDescriptorProvider

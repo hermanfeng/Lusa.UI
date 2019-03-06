@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Windows.Input;
 using System.Reflection;
+using System.Windows.Input;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.ViewModelBase
 {
     /// <summary>
     /// A command whose sole purpose is to relay its functionality to other

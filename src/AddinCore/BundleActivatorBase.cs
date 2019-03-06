@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UIShell.OSGi;
+﻿using UIShell.OSGi;
 
-namespace AddinEngine
+namespace Lusa.AddinEngine
 {
     public class BundleActivatorBase : IBundleActivator
     {

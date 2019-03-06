@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using AddinEngine;
+using Lusa.AddinEngine.ExtendsionPoint;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.ExtensionPoint
 {
     public class MainPanelContentPointBulder : ClassPointBuilder<FrameworkElement>
     {

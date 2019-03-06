@@ -1,6 +1,6 @@
-﻿using AddinEngine;
+﻿using Lusa.AddinEngine.ExtendsionPoint;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI.Controls.Menu.ExtensionPoint
 {
     public class MenuItemDescriptorBuilder : ClassPointBuilder<IMenuDescriptorProvider<MenuItemDescriptor>>
     {

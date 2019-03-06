@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using AddinEngine;
-using System;
-using CommonExtension;
+﻿using System;
+using System.Collections.Generic;
+using Lusa.AddinEngine;
+using Lusa.AddinEngine.Extension;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.MessageService
 {
     public class MessageService : IMessageService, IMessageProvider
     {
@@ -31,9 +31,9 @@ namespace CommonLibrary
             }
         }
 
-        private List<MessageObject> allMessages = new List<MessageObject>();
+        private List<MessageObject.MessageObject> allMessages = new List<MessageObject.MessageObject>();
         private List<IMessageListener> messageListeners = new List<IMessageListener>();
-        public void SendMessage(MessageObject msg)
+        public void SendMessage(MessageObject.MessageObject msg)
         {
             if (EnableMessage && msg != null)
             {
@@ -63,7 +63,7 @@ namespace CommonLibrary
             set { enableMessgae = value; }
         }
 
-        IEnumerable<MessageObject> IMessageProvider.AllMessageObjects
+        IEnumerable<MessageObject.MessageObject> IMessageProvider.AllMessageObjects
         {
             get { return allMessages; }
         }

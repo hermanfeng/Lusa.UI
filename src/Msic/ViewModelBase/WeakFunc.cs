@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
-namespace CommonLibrary
+
+namespace Lusa.UI.Msic.ViewModelBase
 {
     /// <summary>
     /// Stores a Func&lt;T&gt; without causing a hard reference

@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Media;
-using CommonLibrary;
-using Infragistics.Controls.Editors;
-using Infragistics.Documents.RichText;
-using CommonExtension;
 using System.Windows.Controls.Primitives;
-using Infragistics.Controls.Editors.Primitives;
+using System.Windows.Media;
 using System.Windows.Threading;
+using Infragistics.Controls.Editors;
+using Infragistics.Controls.Editors.Primitives;
 using Infragistics.Controls.Menus;
+using Infragistics.Documents.RichText;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.Msic.MessageService;
+using Lusa.UI.Msic.MessageService.MessageObject;
+using Lusa.UI.WorkBenchContract.Extension;
 
-namespace MainPanelPlugin.View
+namespace Lusa.UI.MainPanel.Dock.View
 {
     /// <summary>
     /// Interaction logic for Output.xaml
@@ -48,7 +50,7 @@ namespace MainPanelPlugin.View
             base.OnApplyTemplate();
             try
             {
-                var msgProvider = BundleActivator.GetService<IMessageProvider>();
+                var msgProvider = MessageService.Instance.As<IMessageProvider>();
                 if (msgProvider.IsNotNull())
                 {
                     msgProvider.AllMessageObjects.ForEach(msg =>

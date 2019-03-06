@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using CommonExtension;
+using Lusa.AddinEngine.Extension;
 
-namespace AddinEngine
+namespace Lusa.AddinEngine.ElementOrder
 {
     public class ElementReorder<T> where T : class 
     {

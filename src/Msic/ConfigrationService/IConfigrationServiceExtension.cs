@@ -1,7 +1,7 @@
 ﻿using System;
-using CommonExtension;
+using Lusa.AddinEngine.Extension;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.ConfigrationService
 {
     public static class IConfigrationServiceExtension
     {

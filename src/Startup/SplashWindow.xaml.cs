@@ -13,8 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using AddinEngine;
-using CommonExtension;
+using Lusa.AddinEngine;
+using Lusa.AddinEngine.Extension;
 using UIShell.OSGi;
 
 namespace AppStartUp

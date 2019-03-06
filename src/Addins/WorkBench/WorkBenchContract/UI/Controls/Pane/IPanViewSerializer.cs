@@ -1,9 +1,4 @@
-﻿using System;
-using System.Xml.Serialization;
-using AddinEngine;
-using CommonExtension;
-
-namespace WorkBenchContract
+﻿namespace Lusa.UI.WorkBenchContract.UI.Controls.Pane
 {
     public interface IPanViewSerializer
     {

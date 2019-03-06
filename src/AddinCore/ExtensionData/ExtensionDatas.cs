@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using CommonExtension;
+using Lusa.AddinEngine.Extension;
 
-namespace AddinEngine
+namespace Lusa.AddinEngine.ExtensionData
 {
     public class ExtensionDatas
     {

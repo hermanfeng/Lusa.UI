@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.ViewModelBase
 {
     public class AsyncObservableCollection<T> : ObservableCollection<T>
     {

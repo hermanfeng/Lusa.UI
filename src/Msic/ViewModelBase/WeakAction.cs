@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
-namespace CommonLibrary
+
+namespace Lusa.UI.Msic.ViewModelBase
 {
     /// <summary>
     /// Stores an <see cref="T:System.Action" /> without causing a hard reference

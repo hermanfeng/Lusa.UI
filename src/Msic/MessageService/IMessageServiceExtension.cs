@@ -1,8 +1,9 @@
-﻿using CommonExtension;
-using System;
+﻿using System;
 using System.Windows.Media;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.Msic.MessageService.MessageObject;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.MessageService
 {
     public static class IMessageServiceExtension
     {
@@ -11,7 +12,7 @@ namespace CommonLibrary
         {
             if (service != null)
             {
-                service.SendMessage(new MessageObject(message) { Type = type, Sender = sender,NeedPopup = needPopup, CustomColor = customColor});
+                service.SendMessage(new MessageObject.MessageObject(message) { Type = type, Sender = sender,NeedPopup = needPopup, CustomColor = customColor});
             }
         }
 
@@ -28,7 +29,7 @@ namespace CommonLibrary
             if (service != null)
             {
                 clickMessage = clickMessage.IsNullOrEmpty() ? message : clickMessage;
-                service.SendMessage(new MessageObject(message) { Type = type, Sender = new DefaultMessageAssistant(clickMessage, clickAction) });
+                service.SendMessage(new MessageObject.MessageObject(message) { Type = type, Sender = new DefaultMessageAssistant(clickMessage, clickAction) });
             }
         }
 
@@ -37,7 +38,7 @@ namespace CommonLibrary
             if (service != null && e!=null)
             {
                 var message = BuildExceptionMessage(e);
-                service.SendMessage(new MessageObject(message) { Type = type, Sender = sender });
+                service.SendMessage(new MessageObject.MessageObject(message) { Type = type, Sender = sender });
             }
         }
 

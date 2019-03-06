@@ -1,23 +1,23 @@
 ﻿using System.Collections.Generic;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.MessageService
 {
     public interface IMessageService
     {
         bool EnableMessage { get; set; }
-        void SendMessage(MessageObject msg);
+        void SendMessage(MessageObject.MessageObject msg);
         void RegisterMessageListener(IMessageListener msgListener);
     }
 
 
     public interface IMessageListener
     {
-        bool CanProcess(MessageObject msg);
-        void NotifyMessge(MessageObject msg);
+        bool CanProcess(MessageObject.MessageObject msg);
+        void NotifyMessge(MessageObject.MessageObject msg);
     }
 
     public interface IMessageProvider
     {
-        IEnumerable<MessageObject> AllMessageObjects { get; }
+        IEnumerable<MessageObject.MessageObject> AllMessageObjects { get; }
     }
 }

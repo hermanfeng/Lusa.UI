@@ -1,13 +1,10 @@
-﻿using WorkBenchContract;
+﻿using System;
+using System.ComponentModel;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.WorkBenchContract.ExtensionPoint;
 
-namespace WorkBench
+namespace Lusa.UI.WorkBench
 {
-    using AddinEngine;
-    using System;
-    using System.ComponentModel;
-    using System.Linq;
-    using CommonExtension;
-
     public partial class EmbedContent : INotifyPropertyChanged
     {
         public EmbedContent()

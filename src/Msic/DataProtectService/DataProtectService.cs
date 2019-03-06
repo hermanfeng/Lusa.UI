@@ -1,4 +1,4 @@
-﻿namespace CommonLibrary
+﻿namespace Lusa.UI.Msic.DataProtectService
 {
     public interface IDataProtectService
     {

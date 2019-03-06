@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CommonExtension;
-using CommonLibrary;
 using UIShell.OSGi;
 using System.IO;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.Msic.FileService;
+using Lusa.UI.Msic.MessageService;
+using Lusa.UI.Msic.MessageService.MessageObject;
 
 namespace ErrorMessagePersistant
 {

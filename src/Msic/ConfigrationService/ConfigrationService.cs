@@ -1,12 +1,11 @@
-﻿using AddinEngine;
-using System;
-using System.Configuration;
-using System.Linq;
-using CommonExtension;
+﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
+using System.Linq;
+using Lusa.AddinEngine.Extension;
 
-namespace CommonLibrary
+namespace Lusa.UI.Msic.ConfigrationService
 {
     public class ConfigurationService : IConfigurationService
     {

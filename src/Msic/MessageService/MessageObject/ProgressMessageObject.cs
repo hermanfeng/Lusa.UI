@@ -1,4 +1,4 @@
-﻿namespace CommonLibrary
+﻿namespace Lusa.UI.Msic.MessageService.MessageObject
 {
     public class ProgressMessageObject:MessageObject
     {

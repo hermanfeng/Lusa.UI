@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using UIShell.OSGi;
-using System.Windows.Data;
-using System.Windows.Media;
-using System.Xml;
-using System.Xml.Linq;
-using System.Reflection;
-
-namespace AddinEngine
+﻿namespace Lusa.AddinEngine.ExtendsionPoint
 {
     public interface IExtensionInitializer<T> where T : class
     {

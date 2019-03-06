@@ -1,14 +1,13 @@
 ﻿using System.Diagnostics;
 using System.Linq;
-using AddinEngine;
-using System.Windows;
-using CommonLibrary;
-using WorkBench;
-using CommonExtension;
-using WorkBenchContract;
 using System.Threading;
+using System.Windows;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.Msic.MessageService;
+using Lusa.UI.WorkBench.ExtensionPoint;
+using Lusa.UI.WorkBenchContract;
 
-namespace WorkBench
+namespace Lusa.UI.WorkBench
 {
     public class Workbench : IWorkBench
     {

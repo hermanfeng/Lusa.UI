@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
-using CommonLibrary;
-using MainPanelPlugin.View;
-using CommonExtension;
-using WorkBenchContract;
+using System.Xml.Linq;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.MainPanel.Dock.View;
+using Lusa.UI.Msic.FileService;
+using Lusa.UI.Msic.MessageService;
+using Lusa.UI.Msic.MessageService.MessageObject;
+using Lusa.UI.WorkBenchContract.ExtensionPoint;
+using Lusa.UI.WorkBenchContract.UI;
+using Lusa.UI.WorkBenchContract.UI.Commands;
+using Lusa.UI.WorkBenchContract.UI.Controls.Pane;
+using Microsoft.Win32;
 using Xceed.Wpf.AvalonDock;
-using System.Xml;
 using Xceed.Wpf.AvalonDock.Layout;
 using Xceed.Wpf.AvalonDock.Layout.Serialization;
-using System.IO;
-using System.Xml.Linq;
-using Microsoft.Win32;
 
-namespace MainPanelPlugin
+namespace Lusa.UI.MainPanel.Dock
 {
     /// <summary>
     /// DesignerDockPanel.xaml 的交互逻辑

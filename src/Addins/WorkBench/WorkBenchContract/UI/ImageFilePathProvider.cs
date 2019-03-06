@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract.UI
 {
     public class ImageFilePathProvider
     {

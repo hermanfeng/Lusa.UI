@@ -85,7 +85,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BundleActivator.cs" />
     <Compile Include="CommonResources.xaml.cs">
       <DependentUpon>CommonResources.xaml</DependentUpon>
     </Compile>
@@ -299,7 +298,6 @@
     <ProjectReference Include="..\WorkBench\WorkBenchContract\Lusa.UI.WorkBenchContract.csproj">
       <Project>{b2138ffe-1c61-4322-9173-2c5ea1ae5de6}</Project>
       <Name>Lusa.UI.WorkBenchContract</Name>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using UIShell.OSGi;
+using Lusa.AddinEngine.ExtendsionPoint;
 
-namespace AddinEngine
+namespace Lusa.UI.WorkBench.ExtensionPoint
 {
     public class GlobalResourcesLevel1PointBuilder : ClassPointBuilder<ResourceDictionary>
     {

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
 
-namespace CommonExtension
+namespace Lusa.AddinEngine.Extension
 {
     public static class XElementExtension
     {

@@ -1,9 +1,8 @@
-﻿using UIShell.OSGi;
-using WorkBench;
-using AddinEngine;
-using WorkBenchContract;
+﻿using Lusa.AddinEngine;
+using Lusa.UI.WorkBenchContract;
+using UIShell.OSGi;
 
-namespace WorkBenchPlugin
+namespace Lusa.UI.WorkBench
 {
     public class BundleActivator : BundleActivatorBase
     {

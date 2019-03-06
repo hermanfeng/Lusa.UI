@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UIShell.OSGi;
-using CommonExtension;
-using UIShell.OSGi.Core.Service;
 using System.IO;
+using System.Linq;
+using Lusa.AddinEngine.Extension;
+using UIShell.OSGi;
 using UIShell.OSGi.Configuration.BundleManifest;
+using UIShell.OSGi.Core.Service;
 
-namespace AddinEngine
+namespace Lusa.AddinEngine
 {
     public class AddinEngineHost
     {

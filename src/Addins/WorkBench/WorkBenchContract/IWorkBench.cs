@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace WorkBenchContract
+namespace Lusa.UI.WorkBenchContract
 {
     public interface IWorkBench
     {
