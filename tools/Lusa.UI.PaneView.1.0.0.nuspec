@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Lusa.UI.PaneView</id>
+    <version>1.0.0</version>
+    <title></title>
+    <authors>Lusa</authors>
+    <owners>Lusa</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Lusa UI</description>
+    <language>en-US</language>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="PresentationCore" />
+      <frameworkAssembly assemblyName="PresentationFramework" />
+      <frameworkAssembly assemblyName="System.Xaml" />
+      <frameworkAssembly assemblyName="WindowsBase" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src=".\PaneView\Manifest.xml.pp" target="content\net461\Manifest.xml.pp" />
+    <file src=".\PaneView\PaneViewProvider.cs.pp" target="content\net461\PaneViewProvider.cs.pp" />
+    <file src=".\PaneView\PaneViewUserControl.xaml.pp" target="content\net461\PaneViewUserControl.xaml.pp" />
+    <file src=".\PaneView\PaneViewUserControl.xaml.cs.pp" target="content\net461\PaneViewUserControl.xaml.cs.pp" />
+    <file src="..\src\bin\Lusa.UI.Msic.dll" target="lib\net461\Lusa.UI.Msic.dll" />
+    <file src="..\src\bin\Lusa.UI.WorkBenchContract.dll" target="lib\net461\Lusa.UI.WorkBenchContract.dll" />
+  </files>
+</package>

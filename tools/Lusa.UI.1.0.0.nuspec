@@ -13,6 +13,6 @@
   <files>
     <file src="..\src\bin\Lusa.UI.WorkBenchContract.dll" target="lib\net461" />
 	<file src="..\src\bin\Lusa.UI.Msic.dll" target="lib\net461" />
-	<file src=".\Manifest.xml.pp" target="content\net461" />
+	<file src=".\Basic\Manifest.xml.pp" target="content\net461" />
   </files>
 </package>
