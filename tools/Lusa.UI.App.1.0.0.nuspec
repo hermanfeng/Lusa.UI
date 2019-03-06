@@ -1,18 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Lusa.UI</id>
+    <id>Lusa.UI.App</id>
     <version>1.0.0</version>
     <title></title>
     <authors>Lusa</authors>
     <owners>Lusa</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Lusa UI</description>
+    <description>Lusa UI App</description>
     <language>en-US</language>
   </metadata>
   <files>
-    <file src="..\src\bin\Lusa.UI.WorkBenchContract.dll" target="lib\net461" />
-	<file src="..\src\bin\Lusa.UI.Msic.dll" target="lib\net461" />
-	<file src=".\Manifest.xml.pp" target="content\net461" />
+    <file src="..\src\bin\**" target="content\net461\App" />
   </files>
 </package>
