@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Lusa.UI</id>
+    <version>1.0.0</version>
+    <title></title>
+    <authors>Lusa</authors>
+    <owners>Lusa</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Lusa UI</description>
+    <language>en-US</language>
+  </metadata>
+  <files>
+    <file src="..\src\bin\Plugins\ErrorMessagePersistant\bin\Lusa.UI.ErrorMessagePersistant.dll" target="content\net461\Plugins\ErrorMessagePersistant\bin\Lusa.UI.ErrorMessagePersistant.dll" />
+    <file src="..\src\bin\Plugins\ErrorMessagePersistant\bin\Lusa.UI.ErrorMessagePersistant.pdb" target="content\net461\Plugins\ErrorMessagePersistant\bin\Lusa.UI.ErrorMessagePersistant.pdb" />
+    <file src="..\src\bin\Plugins\ErrorMessagePersistant\Manifest.xml" target="content\net461\Plugins\ErrorMessagePersistant\Manifest.xml" />
+    <file src="..\src\bin\Plugins\MainPanel\bin\Lusa.UI.MainPanel.dll" target="content\net461\Plugins\MainPanel\bin\Lusa.UI.MainPanel.dll" />
+    <file src="..\src\bin\Plugins\MainPanel\bin\Lusa.UI.MainPanel.dll.config" target="content\net461\Plugins\MainPanel\bin\Lusa.UI.MainPanel.dll.config" />
+    <file src="..\src\bin\Plugins\MainPanel\bin\Lusa.UI.MainPanel.pdb" target="content\net461\Plugins\MainPanel\bin\Lusa.UI.MainPanel.pdb" />
+    <file src="..\src\bin\Plugins\MainPanel\bin\Xceed.Wpf.AvalonDock.dll" target="content\net461\Plugins\MainPanel\bin\Xceed.Wpf.AvalonDock.dll" />
+    <file src="..\src\bin\Plugins\MainPanel\bin\Xceed.Wpf.AvalonDock.pdb" target="content\net461\Plugins\MainPanel\bin\Xceed.Wpf.AvalonDock.pdb" />
+    <file src="..\src\bin\Plugins\MainPanel\bin\Xceed.Wpf.AvalonDock.Themes.VS2013.dll" target="content\net461\Plugins\MainPanel\bin\Xceed.Wpf.AvalonDock.Themes.VS2013.dll" />
+    <file src="..\src\bin\Plugins\MainPanel\bin\Xceed.Wpf.AvalonDock.Themes.VS2013.pdb" target="content\net461\Plugins\MainPanel\bin\Xceed.Wpf.AvalonDock.Themes.VS2013.pdb" />
+    <file src="..\src\bin\Plugins\MainPanel\Manifest.xml" target="content\net461\Plugins\MainPanel\Manifest.xml" />
+    <file src="..\src\bin\Plugins\Share\bin\InfragisticsWPF4.Controls.Editors.XamRichTextEditor.v15.2.dll" target="content\net461\Plugins\Share\bin\InfragisticsWPF4.Controls.Editors.XamRichTextEditor.v15.2.dll" />
+    <file src="..\src\bin\Plugins\Share\bin\InfragisticsWPF4.Controls.Menus.XamMenu.v15.2.dll" target="content\net461\Plugins\Share\bin\InfragisticsWPF4.Controls.Menus.XamMenu.v15.2.dll" />
+    <file src="..\src\bin\Plugins\Share\bin\InfragisticsWPF4.Documents.Core.v15.2.dll" target="content\net461\Plugins\Share\bin\InfragisticsWPF4.Documents.Core.v15.2.dll" />
+    <file src="..\src\bin\Plugins\Share\bin\InfragisticsWPF4.Documents.RichTextDocument.v15.2.dll" target="content\net461\Plugins\Share\bin\InfragisticsWPF4.Documents.RichTextDocument.v15.2.dll" />
+    <file src="..\src\bin\Plugins\Share\bin\InfragisticsWPF4.Undo.v15.2.dll" target="content\net461\Plugins\Share\bin\InfragisticsWPF4.Undo.v15.2.dll" />
+    <file src="..\src\bin\Plugins\Share\bin\InfragisticsWPF4.v15.2.dll" target="content\net461\Plugins\Share\bin\InfragisticsWPF4.v15.2.dll" />
+    <file src="..\src\bin\Plugins\ThirdPart\UIShell.BundleManagementService\bin\ICSharpCode.SharpZipLib.dll" target="content\net461\Plugins\ThirdPart\UIShell.BundleManagementService\bin\ICSharpCode.SharpZipLib.dll" />
+    <file src="..\src\bin\Plugins\ThirdPart\UIShell.BundleManagementService\bin\UIShell.BundleManagementService.dll" target="content\net461\Plugins\ThirdPart\UIShell.BundleManagementService\bin\UIShell.BundleManagementService.dll" />
+    <file src="..\src\bin\Plugins\ThirdPart\UIShell.BundleManagementService\bin\UIShell.iOpenWorks.BundleRepository.dll" target="content\net461\Plugins\ThirdPart\UIShell.BundleManagementService\bin\UIShell.iOpenWorks.BundleRepository.dll" />
+    <file src="..\src\bin\Plugins\ThirdPart\UIShell.BundleManagementService\Manifest.xml" target="content\net461\Plugins\ThirdPart\UIShell.BundleManagementService\Manifest.xml" />
+    <file src="..\src\bin\Plugins\WorkBench\bin\Lusa.UI.WorkBench.dll" target="content\net461\Plugins\WorkBench\bin\Lusa.UI.WorkBench.dll" />
+    <file src="..\src\bin\Plugins\WorkBench\bin\Lusa.UI.WorkBench.pdb" target="content\net461\Plugins\WorkBench\bin\Lusa.UI.WorkBench.pdb" />
+    <file src="..\src\bin\Plugins\WorkBench\Manifest.xml" target="content\net461\Plugins\WorkBench\Manifest.xml" />
+    <file src="..\src\bin\App.ico" target="content\net461\App.ico" />
+    <file src="..\src\bin\Lusa.AddinEngine.dll" target="content\net461\Lusa.AddinEngine.dll" />
+    <file src="..\src\bin\Lusa.AddinEngine.pdb" target="content\net461\Lusa.AddinEngine.pdb" />
+    <file src="..\src\bin\Lusa.UI.Msic.dll" target="content\net461\Lusa.UI.Msic.dll" />
+    <file src="..\src\bin\Lusa.UI.Msic.pdb" target="content\net461\Lusa.UI.Msic.pdb" />
+    <file src="..\src\bin\Lusa.UI.Startup.exe" target="content\net461\Lusa.UI.Startup.exe" />
+    <file src="..\src\bin\Lusa.UI.Startup.exe.config" target="content\net461\Lusa.UI.Startup.exe.config" />
+    <file src="..\src\bin\Lusa.UI.Startup.pdb" target="content\net461\Lusa.UI.Startup.pdb" />
+    <file src="..\src\bin\Lusa.UI.WorkBenchContract.dll" target="content\net461\Lusa.UI.WorkBenchContract.dll" />
+    <file src="..\src\bin\Lusa.UI.WorkBenchContract.pdb" target="content\net461\Lusa.UI.WorkBenchContract.pdb" />
+    <file src="..\src\bin\UIShell.iOpenWorks.Bootstrapper.dll" target="content\net461\UIShell.iOpenWorks.Bootstrapper.dll" />
+    <file src="..\src\bin\UIShell.iOpenWorks.BundleRepository.dll" target="content\net461\UIShell.iOpenWorks.BundleRepository.dll" />
+    <file src="..\src\bin\UIShell.OSGi.dll" target="content\net461\UIShell.OSGi.dll" />
+  </files>
+</package>
