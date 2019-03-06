@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C2A076B-E626-4A07-9D6E-4AEE3FEC41B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lusa.UI.WorkBench</RootNamespace>
+    <AssemblyName>Lusa.UI.WorkBench</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIShell.OSGi">
+      <HintPath>..\..\..\Lib\UIShell\UIShell.OSGi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase">
+    </Reference>
+    <Reference Include="PresentationCore">
+    </Reference>
+    <Reference Include="PresentationFramework">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtensionPoint\GlobalResourcesBuilder.cs" />
+    <Compile Include="ExtensionPoint\GlobalResourcesLevel1Builder.cs" />
+    <Compile Include="ExtensionPoint\WorkBenchWindowPointBuilder.cs" />
+    <Compile Include="Workbench.cs" />
+    <Compile Include="BundleActivator.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="WindowContent.xaml.cs">
+      <DependentUpon>WindowContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThreadedWindow.xaml.cs">
+      <DependentUpon>ThreadedWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="WindowContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThreadedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="ExtensionPoint\GlobalResourcesLevel2Builder.cs" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\AddinCore\Lusa.AddinEngine.csproj">
+      <Project>{6BD9BD94-AEF1-4F2B-B15C-54623DDEBAD6}</Project>
+      <Name>Lusa.AddinEngine</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Msic\Lusa.UI.Msic.csproj">
+      <Project>{9DE99705-50E4-4E8B-8983-BA95BCCEE1AD}</Project>
+      <Name>Lusa.UI.Msic</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkBenchContract\Lusa.UI.WorkBenchContract.csproj">
+      <Project>{B2138FFE-1C61-4322-9173-2C5EA1AE5DE6}</Project>
+      <Name>Lusa.UI.WorkBenchContract</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Manifest.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set localPath="$(SolutionDir)src\bin\Plugins\WorkBench"
+mkdir "%25localPath%25\bin\" 
+xcopy /y /D "$(TargetDir)*" "%25localPath%25\bin\"
+move /y "%25localPath%25\bin\Manifest.xml" "%25localPath%25"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

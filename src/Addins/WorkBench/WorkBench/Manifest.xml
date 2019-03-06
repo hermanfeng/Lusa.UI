@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="WorkBench" SymbolicName="WorkBenchPlugin" Version="1.0.0.0" InitializedState="Active" StartLevel="20">
+  <Activator Type="WorkBenchPlugin.BundleActivator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\WorkBenchPlugin.dll" Share="false" MultipleVersions="false" />
+  </Runtime>
+  <ExtensionPoint Point="WorkBench.ToolBarTabGroupPoint" />
+  <Extension Point="UIShell.BundleManagementOptions">
+    <BundleManagementOption AllowToStarted="true" AllowToStopped="false" AllowToUninstalled="false" />
+  </Extension>
+  <BundleInfo Category="CommonUI" Description="Provider the basic layout of the window. Current it splits the window to three parts, Top, Center,and bottom." />
+</Bundle>

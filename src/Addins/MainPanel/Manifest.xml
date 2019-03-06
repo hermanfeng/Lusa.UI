@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="MainPanelPlugin" SymbolicName="MainPanelPlugin" Version="1.0.0.0" InitializedState="Active">
+  <Activator Type="MainPanelPlugin.BundleActivator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\MainPanelPlugin.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="bin\Xceed.Wpf.AvalonDock.dll"/>
+    <Assembly Path="..\share\bin\InfragisticsWPF4.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="..\share\bin\InfragisticsWPF4.Documents.RichTextDocument.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="..\share\bin\InfragisticsWPF4.Controls.Editors.XamRichTextEditor.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="..\share\bin\InfragisticsWPF4.Undo.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="..\share\bin\InfragisticsWPF4.Controls.Menus.XamMenu.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Dependency BundleSymbolicName="CommonLibrary" Resolution="Mandatory" />
+  </Runtime>
+  <Extension Point="WorkBench.MainPanelContentPoint">
+    <instance class="MainPanelPlugin.MainDockPanel" />
+  </Extension>
+  <Extension Point="Global.Resources.Level1">
+    <instance class="MainPanelPlugin.CommonResources" />
+  </Extension>
+  <Extension Point="WorkBench.StatusBarContentlPoint">
+    <instance class="MainPanelPlugin.ProgressStatusBarItem" />
+  </Extension>
+  <Extension Point="Menu.TabDescriptorProvider">
+    <instance class="MainPanelPlugin.ViewRibbonTabDescriptorProvider" />
+  </Extension>
+  <Extension Point="Menu.GroupDescriptorProvider">
+    <instance class="MainPanelPlugin.LayoutRibbonGroupDescriptorProvider" />
+    <instance class="MainPanelPlugin.PaneViewRibbonGroupDescriptorProvider" />
+  </Extension>
+  <Extension Point="Menu.ItemDescriptorProvider">
+    <instance class="MainPanelPlugin.LoadLayoutItemProvider" />
+    <instance class="MainPanelPlugin.ResetLayoutItemProvider" />
+    <instance class="MainPanelPlugin.SaveLayoutItemProvider" />
+    <instance class="MainPanelPlugin.PanViewsItemProvider" />
+  </Extension>
+  <BundleInfo Category="CommonUI" Description="the basic dock panel provider. All the pane views are dependent on it." />
+</Bundle>

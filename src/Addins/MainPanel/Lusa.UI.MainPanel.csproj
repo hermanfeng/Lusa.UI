@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D4AE0E92-B3B9-409E-8701-5F0DB6565023}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lusa.UI.MainPanel</RootNamespace>
+    <AssemblyName>Lusa.UI.MainPanel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InfragisticsWPF4.Controls.Editors.XamRichTextEditor.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Controls.Editors.XamRichTextEditor.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Menus.XamMenu.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Controls.Menus.XamMenu.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Documents.Core.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Documents.Core.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Documents.RichTextDocument.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Documents.RichTextDocument.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Undo.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Undo.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIShell.OSGi">
+      <HintPath>..\..\Lib\UIShell\UIShell.OSGi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.5.2.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Dirkster.AvalonDock.Themes.VS2013.3.5.0.2\lib\net4\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2013, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Dirkster.AvalonDock.Themes.VS2013.3.5.0.2\lib\net4\Xceed.Wpf.AvalonDock.Themes.VS2013.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BundleActivator.cs" />
+    <Compile Include="CommonResources.xaml.cs">
+      <DependentUpon>CommonResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dock\MainDockPanel.xaml.cs">
+      <DependentUpon>MainDockPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dock\View\UserSettings.xaml.cs">
+      <DependentUpon>UserSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dock\View\Output.xaml.cs">
+      <DependentUpon>Output.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="StatusBarItem\ProgressStatusBarItem.cs" />
+    <Compile Include="StatusBarItem\ProgressItem.xaml.cs">
+      <DependentUpon>ProgressItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTab\LayoutRibbonGroupDescriptorProvider.cs" />
+    <Compile Include="ViewTab\Layout\LoadLayoutItemProvider.cs" />
+    <Compile Include="ViewTab\Layout\ResetLayoutItemProvider.cs" />
+    <Compile Include="ViewTab\Layout\SaveLayoutItemProvider.cs" />
+    <Compile Include="ViewTab\MenuDescriptorProvider.cs" />
+    <Compile Include="ViewTab\PaneViewRibbonGroupDescriptorProvider.cs" />
+    <Compile Include="ViewTab\ViewRibbonTabDescriptorProvider.cs" />
+    <Compile Include="ViewTab\View\PanViewsItemProvider.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="CommonResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dock\MainDockPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dock\View\UserSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dock\View\Output.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StatusBarItem\ProgressItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bullet_toggle_minus.png" />
+    <Resource Include="Images\bullet_toggle_plus.png" />
+    <Resource Include="Images\connect_to_database.png" />
+    <Resource Include="Images\connect_to_server.png" />
+    <Resource Include="Images\data.png" />
+    <Resource Include="Images\data_white.png" />
+    <Resource Include="Images\error.png" />
+    <Content Include="Images\ErrorList\delete.png" />
+    <Content Include="Images\ErrorList\information.png" />
+    <Content Include="Images\ErrorList\warning.png" />
+    <Resource Include="Images\folder_16x16.png" />
+    <Resource Include="Images\FontColor.png" />
+    <Resource Include="Images\history.png" />
+    <Resource Include="Images\icon1.png" />
+    <Resource Include="Images\icon2.png" />
+    <Resource Include="Images\lightning.png" />
+    <Resource Include="Images\output.png" />
+    <Resource Include="Images\Layout\reset.png" />
+    <Resource Include="Images\Layout\save.png" />
+    <Resource Include="Images\Layout\load.png" />
+    <Content Include="Images\Output\01.png" />
+    <Content Include="Images\Output\02.png" />
+    <Content Include="Images\Output\03.png" />
+    <Content Include="Images\Output\04.png" />
+    <Content Include="Images\Output\05.png" />
+    <Content Include="Images\Products\Big\Docking.png" />
+    <Resource Include="Images\properties.png" />
+    <Resource Include="Images\properties_icon.png" />
+    <Resource Include="Images\refresh.png" />
+    <Resource Include="Images\save_16x16.png" />
+    <Resource Include="Images\server.png" />
+    <Content Include="Images\ServerExplorer\database_connect.png" />
+    <Content Include="Images\ServerExplorer\database_connect_white.png" />
+    <Content Include="Images\ServerExplorer\event_log.png" />
+    <Content Include="Images\ServerExplorer\event_log_white.png" />
+    <Content Include="Images\ServerExplorer\folder.png" />
+    <Content Include="Images\ServerExplorer\folder_open_white.png" />
+    <Content Include="Images\ServerExplorer\folder_white.png" />
+    <Content Include="Images\ServerExplorer\hristov.png" />
+    <Content Include="Images\ServerExplorer\hristov_white.png" />
+    <Content Include="Images\ServerExplorer\management_classes.png" />
+    <Content Include="Images\ServerExplorer\management_classes_white.png" />
+    <Content Include="Images\ServerExplorer\management_events.png" />
+    <Content Include="Images\ServerExplorer\message_queues.png" />
+    <Content Include="Images\ServerExplorer\message_queues_white.png" />
+    <Content Include="Images\ServerExplorer\performance_counters.png" />
+    <Content Include="Images\ServerExplorer\references.png" />
+    <Content Include="Images\ServerExplorer\references_white.png" />
+    <Content Include="Images\ServerExplorer\servers.png" />
+    <Content Include="Images\ServerExplorer\servers_white.png" />
+    <Content Include="Images\ServerExplorer\services.png" />
+    <Content Include="Images\ServerExplorer\services_white.png" />
+    <Resource Include="Images\servers.png" />
+    <Resource Include="Images\SettingTheTheme.png" />
+    <Content Include="Images\SolutionExplorer\assembly.png" />
+    <Content Include="Images\SolutionExplorer\assembly_white.png" />
+    <Content Include="Images\SolutionExplorer\bin.png" />
+    <Content Include="Images\SolutionExplorer\data.png" />
+    <Content Include="Images\SolutionExplorer\data_white.png" />
+    <Content Include="Images\SolutionExplorer\description.png" />
+    <Content Include="Images\SolutionExplorer\enumeration.png" />
+    <Content Include="Images\SolutionExplorer\enumeration_white.png" />
+    <Content Include="Images\SolutionExplorer\folder.png" />
+    <Content Include="Images\SolutionExplorer\folder_white.png" />
+    <Content Include="Images\SolutionExplorer\icon1.png" />
+    <Content Include="Images\SolutionExplorer\icon11.png" />
+    <Content Include="Images\SolutionExplorer\icon2.png" />
+    <Content Include="Images\SolutionExplorer\icon3.png" />
+    <Content Include="Images\SolutionExplorer\icon4.png" />
+    <Content Include="Images\SolutionExplorer\icon5.png" />
+    <Content Include="Images\SolutionExplorer\icon6.png" />
+    <Content Include="Images\SolutionExplorer\icon7.png" />
+    <Content Include="Images\SolutionExplorer\icon8.png" />
+    <Content Include="Images\SolutionExplorer\icon9.png" />
+    <Content Include="Images\SolutionExplorer\image.png" />
+    <Content Include="Images\SolutionExplorer\image_white.png" />
+    <Content Include="Images\SolutionExplorer\namespace.png" />
+    <Content Include="Images\SolutionExplorer\namespace_white.png" />
+    <Content Include="Images\SolutionExplorer\properties.png" />
+    <Content Include="Images\SolutionExplorer\properties_white.png" />
+    <Content Include="Images\SolutionExplorer\references.png" />
+    <Content Include="Images\SolutionExplorer\references_white.png" />
+    <Content Include="Images\SolutionExplorer\usercontrol.png" />
+    <Content Include="Images\SolutionExplorer\_image.png" />
+    <Resource Include="Images\solution_explorer.png" />
+    <Resource Include="Images\sortasc.png" />
+    <Resource Include="Images\stop_refresh.png" />
+    <Resource Include="Images\team_explorer.png" />
+    <Content Include="Images\Toolbox\chartview.png" />
+    <Content Include="Images\Toolbox\datafilter.png" />
+    <Content Include="Images\Toolbox\dataform.png" />
+    <Content Include="Images\Toolbox\datapager.png" />
+    <Content Include="Images\Toolbox\imageeditor.png" />
+    <Content Include="Images\Toolbox\map.png" />
+    <Content Include="Images\Toolbox\pdfviewer.png" />
+    <Content Include="Images\Toolbox\pivotgrid.png" />
+    <Content Include="Images\Toolbox\radbook_sl.png" />
+    <Content Include="Images\Toolbox\radcontextmenu_sl.png" />
+    <Content Include="Images\Toolbox\radcoverflow_sl.png" />
+    <Content Include="Images\Toolbox\radcube_sl.png" />
+    <Content Include="Images\Toolbox\radmenu_sl.png" />
+    <Content Include="Images\Toolbox\radoutlookbar_sl.png" />
+    <Content Include="Images\Toolbox\radpanelbar_sl.png" />
+    <Content Include="Images\Toolbox\radribbonbar_sl.png" />
+    <Content Include="Images\Toolbox\radribboncontextualgroupcontainer_sl.png" />
+    <Content Include="Images\Toolbox\radribbonwindow_sl.png" />
+    <Content Include="Images\Toolbox\radrichtextboxribbonui_sl.png" />
+    <Content Include="Images\Toolbox\radrichtextbox_sl.png" />
+    <Content Include="Images\Toolbox\radscheduler_sl.png" />
+    <Content Include="Images\Toolbox\radslider_sl.png" />
+    <Content Include="Images\Toolbox\radtabcontrol_sl.png" />
+    <Content Include="Images\Toolbox\radtileview_sl.png" />
+    <Content Include="Images\Toolbox\radtoolbar_sl.png" />
+    <Content Include="Images\Toolbox\radtreelist_sl.png" />
+    <Content Include="Images\Toolbox\radtreeview_sl.png" />
+    <Content Include="Images\Toolbox\radwindow_sl.png" />
+    <Content Include="Images\Toolbox\richtextbox.png" />
+    <Content Include="Images\Toolbox\sparklines.png" />
+    <Content Include="Images\Toolbox\timebar.png" />
+    <Content Include="Images\Toolbox\timeline.png" />
+    <Content Include="Images\Toolbox\treemapandpivotmap.png" />
+    <Resource Include="Images\panviews.png" />
+    <Content Include="Manifest.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AddinCore\Lusa.AddinEngine.csproj">
+      <Project>{6BD9BD94-AEF1-4F2B-B15C-54623DDEBAD6}</Project>
+      <Name>Lusa.AddinEngine</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Msic\Lusa.UI.Msic.csproj">
+      <Project>{9de99705-50e4-4e8b-8983-ba95bccee1ad}</Project>
+      <Name>Lusa.UI.Msic</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkBench\WorkBenchContract\Lusa.UI.WorkBenchContract.csproj">
+      <Project>{b2138ffe-1c61-4322-9173-2c5ea1ae5de6}</Project>
+      <Name>Lusa.UI.WorkBenchContract</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dock\ViewModel\" />
+    <Folder Include="ExtensionPoint\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set localPath="$(SolutionDir)src\bin\Plugins\MainPanel"
+mkdir "%25localPath%25\bin\" 
+xcopy /y /D "$(TargetDir)*" "%25localPath%25\bin\"
+move /y "%25localPath%25\bin\Manifest.xml" "%25localPath%25"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
