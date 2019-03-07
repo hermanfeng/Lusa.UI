@@ -43,12 +43,24 @@
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Controls.Menus.XamMenu.v15.2.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="InfragisticsWPF4.DockManager.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.DockManager.v15.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="InfragisticsWPF4.Documents.Core.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Documents.Core.v15.2.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="InfragisticsWPF4.Documents.RichTextDocument.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Documents.RichTextDocument.v15.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Ribbon.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Ribbon.v15.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Themes.IG.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Themes.IG.v15.2.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="InfragisticsWPF4.Undo.v15.2">
@@ -77,12 +89,6 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.5.2.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Dirkster.AvalonDock.Themes.VS2013.3.5.0.2\lib\net4\Xceed.Wpf.AvalonDock.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2013, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Dirkster.AvalonDock.Themes.VS2013.3.5.0.2\lib\net4\Xceed.Wpf.AvalonDock.Themes.VS2013.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonResources.xaml.cs">
@@ -121,6 +127,9 @@
     <Compile Include="ViewTab\MenuDescriptorProvider.cs" />
     <Compile Include="ViewTab\PaneViewRibbonGroupDescriptorProvider.cs" />
     <Compile Include="ViewTab\ViewRibbonTabDescriptorProvider.cs" />
+    <Compile Include="ViewTab\View\PaneViewsComboBoxTool.xaml.cs">
+      <DependentUpon>PaneViewsComboBoxTool.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewTab\View\PanViewsItemProvider.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -154,6 +163,10 @@
     <Page Include="StatusBarItem\ProgressItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewTab\View\PaneViewsComboBoxTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

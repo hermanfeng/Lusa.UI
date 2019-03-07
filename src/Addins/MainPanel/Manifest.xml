@@ -6,6 +6,8 @@
     <Assembly Path="..\share\bin\InfragisticsWPF4.Controls.Editors.XamRichTextEditor.v15.2.dll" Share="true" MultipleVersions="false" />
     <Assembly Path="..\share\bin\InfragisticsWPF4.Undo.v15.2.dll" Share="true" MultipleVersions="false" />
     <Assembly Path="..\share\bin\InfragisticsWPF4.Controls.Menus.XamMenu.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="..\share\bin\InfragisticsWPF4.Themes.IG.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="..\share\bin\InfragisticsWPF4.DockManager.v15.2.dll" Share="true" MultipleVersions="false" />
   </Runtime>
   <Extension Point="WorkBench.MainPanelContentPoint">
     <instance class="Lusa.UI.MainPanel.Dock.MainDockPanel" />

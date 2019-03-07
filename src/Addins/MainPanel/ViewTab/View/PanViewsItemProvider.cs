@@ -11,7 +11,7 @@ namespace Lusa.UI.MainPanel.ViewTab.View
                 Name = "PanViews",
                 GroupId = "TView.PaneView", 
                 Location = MenuItemLocation.TabMenu,
-                //ContentType = typeof(PaneViewsComboBoxTool),
+                ContentType = typeof(PaneViewsComboBoxTool),
                 ImageUrl = "/images/panviews.png"
             };
         }

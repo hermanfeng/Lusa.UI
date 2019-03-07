@@ -5,16 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:Custom="http://infragistics.com/Editors"
              xmlns:ribbon="http://infragistics.com/Ribbon"
-             x:Class="MainPanelPlugin.PaneViewsComboBoxTool" 
+             x:Class="Lusa.UI.MainPanel.ViewTab.View.PaneViewsComboBoxTool" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
     </UserControl.Resources>
     <Grid>
-        <!--<ribbon:MenuTool x:Name="Menu" Caption="AllViews" LargeImage="../../Images/panviews.png">
-
-        </ribbon:MenuTool>-->
-        <!--<Custom:XamComboEditor x:Name="ComboEditor" HorizontalAlignment="Center" Width="100" VerticalAlignment="Center"/>-->
+        <ribbon:MenuTool x:Name="Menu" Caption="AllViews" LargeImage="../../Images/panviews.png">
+        </ribbon:MenuTool>
+        <!--<ComboBox x:Name="ComboEditor" HorizontalAlignment="Center" Width="100" VerticalAlignment="Center"/>-->
 
     </Grid>
 </UserControl>

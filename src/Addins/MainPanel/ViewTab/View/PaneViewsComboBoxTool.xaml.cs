@@ -1,25 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using CommonExtension;
 using Infragistics.Windows.DockManager;
 using Infragistics.Windows.Ribbon;
 using Infragistics.Windows.Ribbon.Internal;
-using WorkBenchContract;
-using CommonLibrary;
+using Lusa.AddinEngine.Extension;
+using Lusa.UI.MainPanel.Dock;
+using Lusa.UI.Msic.MessageService;
 
-namespace MainPanelPlugin
+namespace Lusa.UI.MainPanel.ViewTab.View
 {
     /// <summary>
     /// Interaction logic for ComboBoxTool.xaml
@@ -38,11 +29,11 @@ namespace MainPanelPlugin
 
             try
             {
-                var dockManager = MainDockPanel.DockManager;
+                var dockManager = MainDockPanel.XamDockManager;
                 if (dockManager.IsNotNull())
                 {
-                    IEnumerable<SplitPane> splitPanes = MainDockPanel.DockManager.Panes;
-                    MainDockPanel.DockManager.Content.As<DocumentContentHost>(host =>
+                    IEnumerable<SplitPane> splitPanes = MainDockPanel.XamDockManager.Panes;
+                    MainDockPanel.XamDockManager.Content.As<DocumentContentHost>(host =>
                     {
                         splitPanes = host.Panes.Union(splitPanes);
                     });

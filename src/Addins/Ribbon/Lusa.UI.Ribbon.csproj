@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="InfragisticsWPF4.Editors.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Editors.v15.2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="InfragisticsWPF4.Ribbon.v15.2">
       <HintPath>..\..\Lib\Share\InfragisticsWPF4.Ribbon.v15.2.dll</HintPath>
