@@ -5,4 +5,4 @@
   <Extension Point="WorkBench.PaneViewPoint">
     <instance class="$rootnamespace$.$AssemblyName$PanViewProvider" />
   </Extension>
-<Bundle>
+</Bundle>

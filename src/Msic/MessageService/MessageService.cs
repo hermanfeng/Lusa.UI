@@ -17,12 +17,12 @@ namespace Lusa.UI.Msic.MessageService
             e.ExceptionObject.As<Exception>(ex => IMessageServiceExtension.SendMessage(this,ex));
         }
 
+        private static IMessageService service;
+
         public static IMessageService Instance
         {
             get
             {
-
-                var service = BundleActivatorBase.GetService<IMessageService>();
                 if (service.IsNull())
                 {
                     service = new MessageService();
@@ -57,6 +57,7 @@ namespace Lusa.UI.Msic.MessageService
         }
 
         private bool enableMessgae = true;
+
         public bool EnableMessage
         {
             get { return enableMessgae; }

@@ -155,34 +155,35 @@ namespace Lusa.AddinEngine
             {
                 var result = orignal.InstallBundles();
                 var boundDatas = orignal.BundleDatas;
-                foreach(var data in boundDatas.Values)
+                foreach (var data in boundDatas.Values)
                 {
-                    var binPath = Path.Combine(data.Path, "bin");
-                    if (Directory.Exists(binPath))
+                    var binPath = Path.Combine(data.Path);
+
+                    var allAssems = Directory.EnumerateFiles(binPath, "*.dll", SearchOption.AllDirectories)
+                        .Select(p => p.Substring(data.Path.Length + 1)).ToList();
+                    var asses = data.Runtime.Assemblies.ToDictionary(a => a.Path);
+                    foreach (var assePath in allAssems)
                     {
-                        var allAssems = Directory.EnumerateFiles(binPath, "*.dll").Select(p => p.Substring(data.Path.Length + 1)).ToList();
-                        var asses = data.Runtime.Assemblies.ToDictionary(a => a.Path);
-                        foreach (var assePath in allAssems)
+                        if (!asses.ContainsKey(assePath))
                         {
-                            if (!asses.ContainsKey(assePath))
+                            try
                             {
-                                try
-                                {
-                                    var name = System.Reflection.AssemblyName.GetAssemblyName(Path.Combine(data.Path, assePath));
+                                var name = System.Reflection.AssemblyName.GetAssemblyName(Path.Combine(data.Path,
+                                    assePath));
 
-                                    data.Runtime.AddAssembly(new AssemblyData()
-                                    {
-                                        Path = assePath,
-                                    });
-                                }
-                                catch(Exception ex)
+                                data.Runtime.AddAssembly(new AssemblyData()
                                 {
+                                    Path = assePath,
+                                });
+                            }
+                            catch (Exception ex)
+                            {
 
-                                }
                             }
                         }
                     }
                 }
+
                 return result;
             }
         }

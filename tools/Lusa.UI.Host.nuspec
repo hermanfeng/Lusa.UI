@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Lusa.UI.App</id>
+    <id>Lusa.UI.Host</id>
     <version>1.0.0</version>
     <title></title>
     <authors>Lusa</authors>
     <owners>Lusa</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Lusa UI App</description>
+    <description>
+	This package will provide the startup app and plugins in host folder,such as include dock panel, output pane view. Please set build output to the plugins directory and set startup with "Lusa.UI.Startup" in host folder.
+	</description>
     <language>en-US</language>
   </metadata>
   <files>
-    <file src="..\src\bin\**" target="content\net461\App" />
+    <file src="..\src\bin\**" target="content\net461\Host"/>
   </files>
 </package>

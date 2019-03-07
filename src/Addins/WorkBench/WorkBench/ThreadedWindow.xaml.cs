@@ -9,7 +9,11 @@ namespace Lusa.UI.WorkBench
         public WorkBenchMainWindow()
         {
             InitializeComponent();
-            this.Icon = new BitmapImage(new Uri("App.ico", UriKind.RelativeOrAbsolute));
+            //if (System.IO.File.Exists(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App.ico")))
+            //{
+            //    this.Icon = new BitmapImage(new Uri("App.ico", UriKind.RelativeOrAbsolute));
+            //}
+
             //this.WindowState = System.Windows.WindowState.Maximized;
         }
     }
