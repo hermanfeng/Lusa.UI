@@ -17,16 +17,16 @@
     <instance class="Lusa.UI.MainPanel.StatusBarItem.ProgressStatusBarItem" />
   </Extension>
   <Extension Point="Menu.TabDescriptorProvider">
-    <instance class="Lusa.UI.MainPanel.ViewRibbonTabDescriptorProvider" />
+    <instance class="Lusa.UI.MainPanel.ViewTab.ViewRibbonTabDescriptorProvider" />
   </Extension>
   <Extension Point="Menu.GroupDescriptorProvider">
-    <instance class="Lusa.UI.MainPanel.LayoutRibbonGroupDescriptorProvider" />
-    <instance class="Lusa.UI.MainPanel.PaneViewRibbonGroupDescriptorProvider" />
+    <instance class="Lusa.UI.MainPanel.ViewTab.LayoutRibbonGroupDescriptorProvider" />
+    <instance class="Lusa.UI.MainPanel.ViewTab.PaneViewRibbonGroupDescriptorProvider" />
   </Extension>
   <Extension Point="Menu.ItemDescriptorProvider">
-    <instance class="Lusa.UI.MainPanel.ViewTab.View.LoadLayoutItemProvider" />
-    <instance class="Lusa.UI.MainPanel.ViewTab.View.ResetLayoutItemProvider" />
-    <instance class="Lusa.UI.MainPanel.ViewTab.View.SaveLayoutItemProvider" />
+    <instance class="Lusa.UI.MainPanel.ViewTab.Layout.LoadLayoutItemProvider" />
+    <instance class="Lusa.UI.MainPanel.ViewTab.Layout.ResetLayoutItemProvider" />
+    <instance class="Lusa.UI.MainPanel.ViewTab.Layout.SaveLayoutItemProvider" />
     <instance class="Lusa.UI.MainPanel.ViewTab.View.PanViewsItemProvider" />
   </Extension>
   <BundleInfo Category="CommonUI" Description="the basic dock panel provider. All the pane views are dependent on it." />

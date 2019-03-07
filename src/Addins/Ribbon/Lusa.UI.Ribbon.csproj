@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{636F0D7C-3D02-478D-8FFA-3CFB213C2406}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lusa.UI.Ribbon</RootNamespace>
+    <AssemblyName>Lusa.UI.Ribbon</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InfragisticsWPF4.Controls.Interactions.XamDialogWindow.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Controls.Interactions.XamDialogWindow.v15.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Editors.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Editors.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Ribbon.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.Ribbon.v15.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.v15.2">
+      <HintPath>..\..\Lib\Share\InfragisticsWPF4.v15.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DefaultRibbonElements\OthersTab\OptionsRibbonGroupDescriptorProvider.cs" />
+    <Compile Include="DefaultRibbonElements\OthersTab\OptionsRibbonTabDescriptorProvider.cs" />
+    <Compile Include="Resources\RibbonStrings.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Ribbon\DesignRibbon.xaml.cs">
+      <DependentUpon>DesignRibbon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RobbinWindow\RibbonWindowProvider.cs" />
+    <Compile Include="RobbinWindow\RibbonWindow.xaml.cs">
+      <DependentUpon>RibbonWindow.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RibbonStrings.ja.resx" />
+    <EmbeddedResource Include="Resources\RibbonStrings.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Assets\Global.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ribbon\DesignRibbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RobbinWindow\RibbonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Manifest.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AddinCore\Lusa.AddinEngine.csproj">
+      <Project>{6bd9bd94-aef1-4f2b-b15c-54623ddebad6}</Project>
+      <Name>Lusa.AddinEngine</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Msic\Lusa.UI.Msic.csproj">
+      <Project>{9de99705-50e4-4e8b-8983-ba95bccee1ad}</Project>
+      <Name>Lusa.UI.Msic</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkBench\WorkBenchContract\Lusa.UI.WorkBenchContract.csproj">
+      <Project>{b2138ffe-1c61-4322-9173-2c5ea1ae5de6}</Project>
+      <Name>Lusa.UI.WorkBenchContract</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bold.png" />
+    <Resource Include="Images\CenterAlign.png" />
+    <Resource Include="Images\Close_16x16.png" />
+    <Resource Include="Images\Close_Large.png" />
+    <Resource Include="Images\color_chooser_32x32.png" />
+    <Resource Include="Images\EditCopy.png" />
+    <Resource Include="Images\EditCut.png" />
+    <Resource Include="Images\EditRedo.png" />
+    <Resource Include="Images\EditUndo.png" />
+    <Resource Include="Images\Exit_16x16.png" />
+    <Resource Include="Images\FontColor.png" />
+    <Resource Include="Images\FontDlgs.png" />
+    <Resource Include="Images\FormatPainter.png" />
+    <Resource Include="Images\GalleryItem_50sGreen.png" />
+    <Resource Include="Images\GalleryItem_BlatantlyBold.png" />
+    <Resource Include="Images\GalleryItem_BoldlyBlue.png" />
+    <Resource Include="Images\GalleryItem_ItalicizedIndigo.png" />
+    <Resource Include="Images\GalleryItem_MediumRed.png" />
+    <Resource Include="Images\GalleryItem_Normal.png" />
+    <Resource Include="Images\GalleryItem_Pink.png" />
+    <Resource Include="Images\GalleryItem_UnmistakablyLarge.png" />
+    <Resource Include="Images\GalleryItem_Vivid.png" />
+    <Resource Include="Images\help.png" />
+    <Resource Include="Images\Internet_32x32.png" />
+    <Resource Include="Images\Intranet_32x32.png" />
+    <Resource Include="Images\Italic.png" />
+    <Resource Include="Images\JustifyAlign.png" />
+    <Resource Include="Images\LeftAlign.png" />
+    <Resource Include="Images\Local_32x32.png" />
+    <Resource Include="Images\New_Large.png" />
+    <Resource Include="Images\Open_16x16.png" />
+    <Resource Include="Images\Open_Large.png" />
+    <Resource Include="Images\Options_16x16.png" />
+    <Resource Include="Images\Paste_16x16.png" />
+    <Resource Include="Images\Paste_32x32.png" />
+    <Resource Include="Images\QuickStyles_16x16.png" />
+    <Resource Include="Images\QuickStyles_32x32.png" />
+    <Resource Include="Images\RightAlign.png" />
+    <Resource Include="Images\SaveAs_16x16.png" />
+    <Resource Include="Images\Save_16x16.png" />
+    <Resource Include="Images\Save_Large.png" />
+    <Resource Include="Images\Theme_Black.png" />
+    <Resource Include="Images\Theme_Blue.png" />
+    <Resource Include="Images\Theme_IG.png" />
+    <Resource Include="Images\Theme_Large.png" />
+    <Resource Include="Images\Theme_Metro.png" />
+    <Resource Include="Images\Theme_MetroDark.png" />
+    <Resource Include="Images\Theme_Silver.png" />
+    <Resource Include="Images\Underline.png" />
+    <Resource Include="Images\Watermark.png" />
+    <Resource Include="Images\WatermarkTool.png" />
+    <Resource Include="Images\xamRibbonDefaultApplicationIcon.png" />
+    <Resource Include="Images\xamRibbonWindow.png" />
+    <Resource Include="Images\xamRibbonWindowNoRibbon.png" />
+    <Resource Include="Images\xamRibbonWindow_Screenshot.ja.png" />
+    <Resource Include="Images\xamRibbonWindow_Screenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\App.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\data.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set localPath="$(SolutionDir)src\bin\Plugins\Ribbon"
+mkdir "%25localPath%25\bin\" 
+xcopy /y /D "$(TargetDir)*" "%25localPath%25\bin\"
+move /y "%25localPath%25\bin\Manifest.xml" "%25localPath%25"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

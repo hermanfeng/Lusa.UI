@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="Lusa.UI.Ribbon" SymbolicName="Lusa.UI.Ribbon" Version="1.0.0.0" InitializedState="Active">
+  <Runtime>
+    <Assembly Path="..\share\bin\InfragisticsWPF4.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="..\share\bin\InfragisticsWPF4.Editors.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="..\share\bin\InfragisticsWPF4.Ribbon.v15.2.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="..\share\bin\InfragisticsWPF4.Controls.Interactions.XamDialogWindow.v15.2.dll" Share="true" MultipleVersions="false" />
+  </Runtime>
+  <Extension Point="workbench.WorkBenchWindowProvider">
+    <instance class="LusaRibbon.RibbonWindowProvider" />
+  </Extension>
+  <BundleInfo Category="CommonUI" Description="Provide the ribbon window now which just provide the ribbon menu. It can not be uninstall now." />
+</Bundle>
