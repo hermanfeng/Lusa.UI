@@ -21,45 +21,22 @@ namespace AppStartUp
         // Use object type to avoid load UIShell.OSGi.dll before update.
 
         [STAThreadAttribute]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main()
         {
             var app = new App();
             app.Start();
         }
 
-        protected override void OnActivated(EventArgs e)
-        {
-            base.OnActivated(e);
-        }
-
-        protected override void OnStartup(StartupEventArgs e)
-        {
-            //SplashWindow.Instance.Close();
-            base.OnStartup(e);
-        }
-
         private void Start()
         {
-            //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
-            //UpdateCore();
             StartBundleRuntime();
         }
 
-        void UpdateCore() // Update Core Files, including BundleRepositoryOpenAPI, PageFlowService and OSGi Core assemblies.
-        {
-            if (AutoUpdateCoreFiles)
-            {
-                new CoreFileUpdater().UpdateCoreFiles(CoreFileUpdateCheckType.Daily);
-            }
-        }
-
-
         void StartBundleRuntime() // Start OSGi Core.
         {
-            FileLogUtility.SetLogLevel(LogLevel);
-            FileLogUtility.SetMaxFileSizeByMB(MaxLogFileSize);
-            FileLogUtility.SetCreateNewFileOnMaxSize(CreateNewLogFileOnMaxSize);
+            FileLogUtility.SetLogLevel(LogLevel.Debug);
+            FileLogUtility.SetMaxFileSizeByMB(10);
+            FileLogUtility.SetCreateNewFileOnMaxSize(true);
             var st = new Stopwatch();
             st.Start();
             var setting = new AddinEngineStartUpSetting();
@@ -121,96 +98,6 @@ namespace AppStartUp
                 _bundleRuntime = null;
             }
         }
-        #region Settings
-        /// <summary>
-        /// 日志级别。
-        /// </summary>
-        private static LogLevel LogLevel
-        {
-            get
-            {
-                string level = ConfigurationManager.AppSettings["LogLevel"];
-                if (!string.IsNullOrEmpty(level))
-                {
-                    try
-                    {
-                        object result = Enum.Parse(typeof(LogLevel), level);
-                        if (result != null)
-                        {
-                            return (LogLevel)result;
-                        }
-                    }
-                    catch (Exception)
-                    { }
-                }
-                return LogLevel.Debug;
-            }
-        }
-
-        /// <summary>
-        /// 日志文件限制的大小。
-        /// </summary>
-        private static int MaxLogFileSize
-        {
-            get
-            {
-                string size = ConfigurationManager.AppSettings["MaxLogFileSize"];
-                if (!string.IsNullOrEmpty(size))
-                {
-                    try
-                    {
-                        return int.Parse(size);
-                    }
-                    catch { }
-                }
-
-                return 10;
-            }
-        }
-
-        /// <summary>
-        /// 当日志大小超过限制时，是否新建一个。
-        /// </summary>
-        private static bool CreateNewLogFileOnMaxSize
-        {
-            get
-            {
-                string createNew = ConfigurationManager.AppSettings["CreateNewLogFileOnMaxSize"];
-                if (!string.IsNullOrEmpty(createNew))
-                {
-                    try
-                    {
-                        return bool.Parse(createNew);
-                    }
-                    catch { }
-                }
-
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// 当日志大小超过限制时，是否新建一个。
-        /// </summary>
-        private static bool AutoUpdateCoreFiles
-        {
-            get
-            {
-                string autoUpdateCoreFiles = ConfigurationManager.AppSettings["AutoUpdateCoreFiles"];
-                if (!string.IsNullOrEmpty(autoUpdateCoreFiles))
-                {
-                    try
-                    {
-                        return bool.Parse(autoUpdateCoreFiles);
-                    }
-                    catch (Exception)
-                    { }
-                }
-
-                return false;
-            }
-        }
-        #endregion
 
         int IStartupReporter.CurrentProgress
         {
