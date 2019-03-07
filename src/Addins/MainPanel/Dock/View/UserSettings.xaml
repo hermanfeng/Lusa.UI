@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:ig="http://schemas.infragistics.com/xaml"
              xmlns:igPrim="http://schemas.infragistics.com/xaml/primitives"
-             xmlns:workBenchContract="clr-namespace:Lusa.UI.WorkBenchContract.UI.Commands;assembly=Lusa.UI.WorkBenchContract"
+             xmlns:commands="clr-namespace:Lusa.UI.WorkBenchContract.Commands;assembly=Lusa.UI.WorkBenchContract"
              x:Class="Lusa.UI.MainPanel.Dock.View.UserSettings" 
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300" x:Name="outputPanel">
@@ -15,10 +15,10 @@
         <DockPanel>
             <Border BorderThickness="1" Margin="0 2 0 2" DockPanel.Dock="Top">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0 0 0 1">
-                    <Button  Height="20" Content="Save Settings As" Command="workBenchContract:ViewCommands.SaveAsSettings"/>
-                    <Button Margin="5,0,0,0"  Height="20" Content="Load Settings" Command="workBenchContract:ViewCommands.LoadSetings"/>
-                    <Button Margin="5,0,0,0"  Height="20" Content="Save Layout" Command="workBenchContract:ViewCommands.SaveLayout"/>
-                    <Button Margin="5,0,0,0"  Height="20" Content="Load Layout" Command="workBenchContract:ViewCommands.LoadLayout"/>
+                    <Button  Height="20" Content="Save Settings As" Command="commands:ViewCommands.SaveAsSettings"/>
+                    <Button Margin="5,0,0,0"  Height="20" Content="Load Settings" Command="commands:ViewCommands.LoadSetings"/>
+                    <Button Margin="5,0,0,0"  Height="20" Content="Save Layout" Command="commands:ViewCommands.SaveLayout"/>
+                    <Button Margin="5,0,0,0"  Height="20" Content="Load Layout" Command="commands:ViewCommands.LoadLayout"/>
                 </StackPanel>
             </Border>
         </DockPanel>

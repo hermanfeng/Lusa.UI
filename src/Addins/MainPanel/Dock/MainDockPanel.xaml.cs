@@ -13,10 +13,10 @@ using Lusa.UI.MainPanel.Dock.View;
 using Lusa.UI.Msic.FileService;
 using Lusa.UI.Msic.MessageService;
 using Lusa.UI.Msic.MessageService.MessageObject;
+using Lusa.UI.WorkBenchContract;
+using Lusa.UI.WorkBenchContract.Commands;
+using Lusa.UI.WorkBenchContract.Controls.Pane;
 using Lusa.UI.WorkBenchContract.ExtensionPoint;
-using Lusa.UI.WorkBenchContract.UI;
-using Lusa.UI.WorkBenchContract.UI.Commands;
-using Lusa.UI.WorkBenchContract.UI.Controls.Pane;
 using Microsoft.Win32;
 
 namespace Lusa.UI.MainPanel.Dock

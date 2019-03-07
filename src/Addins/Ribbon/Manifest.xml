@@ -7,7 +7,7 @@
     <Assembly Path="..\share\bin\InfragisticsWPF4.Controls.Interactions.XamDialogWindow.v15.2.dll" Share="true" MultipleVersions="false" />
   </Runtime>
   <Extension Point="workbench.WorkBenchWindowProvider">
-    <instance class="LusaRibbon.RibbonWindowProvider" />
+    <instance class="Lusa.UI.Ribbon.RibbonWindowProvider" />
   </Extension>
   <BundleInfo Category="CommonUI" Description="Provide the ribbon window now which just provide the ribbon menu. It can not be uninstall now." />
 </Bundle>

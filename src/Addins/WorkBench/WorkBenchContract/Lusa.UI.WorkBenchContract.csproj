@@ -49,34 +49,34 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\Controls\Pane\IPanViewSerializer.cs" />
-    <Compile Include="UI\ImageFilePathProvider.cs" />
-    <Compile Include="UI\Commands\ViewCommands.cs" />
-    <Compile Include="UI\Controls\OptionsPanel\OptionsPanel.cs" />
-    <Compile Include="UI\Controls\Pane\PaneViewDescriptor.cs" />
-    <Compile Include="UI\Converters\ColorToSolidColorBrushConverter.cs" />
-    <Compile Include="UI\Converters\Converters.cs" />
-    <Compile Include="UI\Converters\DictionaryItemConverter.cs" />
-    <Compile Include="UI\Converters\FormatConverter.cs" />
-    <Compile Include="UI\Converters\ModifierKeysConverter.cs" />
-    <Compile Include="UI\Converters\PercentValueConverter.cs" />
-    <Compile Include="UI\Converters\PrecisionConverter.cs" />
-    <Compile Include="UI\Converters\SolidColorBrushToColorConverter.cs" />
-    <Compile Include="UI\Converters\StringFormatConverter.cs" />
-    <Compile Include="UI\Converters\StringToUriConverter.cs" />
-    <Compile Include="UI\Converters\TimeDurationConverter.cs" />
-    <Compile Include="UI\Converters\TimeSpanConverters.cs" />
-    <Compile Include="UI\Converters\VisibilityConverter.cs" />
-    <Compile Include="UI\Converters\VisibilityToBoolConverter.cs" />
-    <Compile Include="UI\Controls\Pane\IPaneViewDescriptorProvider.cs" />
+    <Compile Include="Controls\Pane\IPanViewSerializer.cs" />
+    <Compile Include="ImageFilePathProvider.cs" />
+    <Compile Include="Commands\ViewCommands.cs" />
+    <Compile Include="Controls\OptionsPanel\OptionsPanel.cs" />
+    <Compile Include="Controls\Pane\PaneViewDescriptor.cs" />
+    <Compile Include="Converters\ColorToSolidColorBrushConverter.cs" />
+    <Compile Include="Converters\Converters.cs" />
+    <Compile Include="Converters\DictionaryItemConverter.cs" />
+    <Compile Include="Converters\FormatConverter.cs" />
+    <Compile Include="Converters\ModifierKeysConverter.cs" />
+    <Compile Include="Converters\PercentValueConverter.cs" />
+    <Compile Include="Converters\PrecisionConverter.cs" />
+    <Compile Include="Converters\SolidColorBrushToColorConverter.cs" />
+    <Compile Include="Converters\StringFormatConverter.cs" />
+    <Compile Include="Converters\StringToUriConverter.cs" />
+    <Compile Include="Converters\TimeDurationConverter.cs" />
+    <Compile Include="Converters\TimeSpanConverters.cs" />
+    <Compile Include="Converters\VisibilityConverter.cs" />
+    <Compile Include="Converters\VisibilityToBoolConverter.cs" />
+    <Compile Include="Controls\Pane\IPaneViewDescriptorProvider.cs" />
     <Compile Include="ExtensionPoint\PaneViewPointBulder.cs" />
     <Compile Include="ExtensionPoint\WorkBenchInitializerPointBuilder.cs" />
     <Compile Include="Extension\DependencyObjectExtension.cs" />
     <Compile Include="IWorkBench.cs" />
-    <Compile Include="UI\Controls\Menu\ExtensionPoint\MenuGroupDescriptorBuilder.cs" />
-    <Compile Include="UI\Controls\Menu\ExtensionPoint\MenuItemDescriptorBuilder.cs" />
-    <Compile Include="UI\Controls\Menu\ExtensionPoint\MenuTabDescriptorBuilder.cs" />
-    <Compile Include="UI\Controls\Menu\IMenuDescriptorProvider.cs" />
+    <Compile Include="Controls\Menu\ExtensionPoint\MenuGroupDescriptorBuilder.cs" />
+    <Compile Include="Controls\Menu\ExtensionPoint\MenuItemDescriptorBuilder.cs" />
+    <Compile Include="Controls\Menu\ExtensionPoint\MenuTabDescriptorBuilder.cs" />
+    <Compile Include="Controls\Menu\IMenuDescriptorProvider.cs" />
     <Compile Include="ExtensionPoint\PanelContentPointBulder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -92,10 +92,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="IUniqeObject.cs" />
-    <Compile Include="UI\Controls\Menu\MenuDescriptorProvider.cs" />
-    <Compile Include="UI\Controls\Menu\MenuGroupDescriptor.cs" />
-    <Compile Include="UI\Controls\Menu\MenuItemDescriptor.cs" />
-    <Compile Include="UI\Controls\Menu\MenuTabDescriptor.cs" />
+    <Compile Include="Controls\Menu\MenuDescriptorProvider.cs" />
+    <Compile Include="Controls\Menu\MenuGroupDescriptor.cs" />
+    <Compile Include="Controls\Menu\MenuItemDescriptor.cs" />
+    <Compile Include="Controls\Menu\MenuTabDescriptor.cs" />
     <Compile Include="IWorkBenchInitializer.cs" />
     <Compile Include="IWorkBenchWindowProvider.cs" />
     <Compile Include="ExtensionPoint\StatusBarContentPointBulder.cs" />
@@ -124,7 +124,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="UI\Controls\OptionsPanel\OptionsPanel.xaml">
+    <Page Include="Controls\OptionsPanel\OptionsPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

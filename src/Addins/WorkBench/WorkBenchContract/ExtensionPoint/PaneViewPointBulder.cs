@@ -1,5 +1,5 @@
 ﻿using Lusa.AddinEngine.ExtendsionPoint;
-using Lusa.UI.WorkBenchContract.UI.Controls.Pane;
+using Lusa.UI.WorkBenchContract.Controls.Pane;
 
 namespace Lusa.UI.WorkBenchContract.ExtensionPoint
 

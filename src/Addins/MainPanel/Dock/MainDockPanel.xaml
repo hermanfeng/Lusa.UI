@@ -8,7 +8,7 @@
              xmlns:dockManager="http://infragistics.com/DockManager"
              xmlns:ig="http://schemas.infragistics.com/xaml"
              xmlns:themes="http://infragistics.com/Themes"
-             xmlns:workBenchContract="clr-namespace:Lusa.UI.WorkBenchContract.UI.Commands;assembly=Lusa.UI.WorkBenchContract"
+             xmlns:commands="clr-namespace:Lusa.UI.WorkBenchContract.Commands;assembly=Lusa.UI.WorkBenchContract"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
@@ -18,9 +18,9 @@
     </UserControl.Resources>
     <Grid x:Name="RootGrid">
         <Grid.CommandBindings>
-            <CommandBinding Command="workBenchContract:ViewCommands.SaveLayout" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
-            <CommandBinding Command="workBenchContract:ViewCommands.LoadLayout" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
-            <CommandBinding Command="workBenchContract:ViewCommands.ResetLayout" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
+            <CommandBinding Command="commands:ViewCommands.SaveLayout" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
+            <CommandBinding Command="commands:ViewCommands.LoadLayout" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
+            <CommandBinding Command="commands:ViewCommands.ResetLayout" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
         </Grid.CommandBindings>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>

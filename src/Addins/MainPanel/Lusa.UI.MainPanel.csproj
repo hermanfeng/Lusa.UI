@@ -120,17 +120,17 @@
     <Compile Include="StatusBarItem\ProgressItem.xaml.cs">
       <DependentUpon>ProgressItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewTab\LayoutRibbonGroupDescriptorProvider.cs" />
-    <Compile Include="ViewTab\Layout\LoadLayoutItemProvider.cs" />
-    <Compile Include="ViewTab\Layout\ResetLayoutItemProvider.cs" />
-    <Compile Include="ViewTab\Layout\SaveLayoutItemProvider.cs" />
-    <Compile Include="ViewTab\MenuDescriptorProvider.cs" />
-    <Compile Include="ViewTab\PaneViewRibbonGroupDescriptorProvider.cs" />
-    <Compile Include="ViewTab\ViewRibbonTabDescriptorProvider.cs" />
-    <Compile Include="ViewTab\View\PaneViewsComboBoxTool.xaml.cs">
+    <Compile Include="Menu\LayoutRibbonGroupDescriptorProvider.cs" />
+    <Compile Include="Menu\Layout\LoadLayoutItemProvider.cs" />
+    <Compile Include="Menu\Layout\ResetLayoutItemProvider.cs" />
+    <Compile Include="Menu\Layout\SaveLayoutItemProvider.cs" />
+    <Compile Include="Menu\MenuDescriptorProvider.cs" />
+    <Compile Include="Menu\PaneViewRibbonGroupDescriptorProvider.cs" />
+    <Compile Include="Menu\ViewRibbonTabDescriptorProvider.cs" />
+    <Compile Include="Menu\View\PaneViewsComboBoxTool.xaml.cs">
       <DependentUpon>PaneViewsComboBoxTool.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewTab\View\PanViewsItemProvider.cs" />
+    <Compile Include="Menu\View\PanViewsItemProvider.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -164,7 +164,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewTab\View\PaneViewsComboBoxTool.xaml">
+    <Page Include="Menu\View\PaneViewsComboBoxTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -316,7 +316,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dock\ViewModel\" />
-    <Folder Include="ExtensionPoint\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

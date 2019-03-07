@@ -19,17 +19,17 @@
     <instance class="Lusa.UI.MainPanel.StatusBarItem.ProgressStatusBarItem" />
   </Extension>
   <Extension Point="Menu.TabDescriptorProvider">
-    <instance class="Lusa.UI.MainPanel.ViewTab.ViewRibbonTabDescriptorProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.ViewRibbonTabDescriptorProvider" />
   </Extension>
   <Extension Point="Menu.GroupDescriptorProvider">
-    <instance class="Lusa.UI.MainPanel.ViewTab.LayoutRibbonGroupDescriptorProvider" />
-    <instance class="Lusa.UI.MainPanel.ViewTab.PaneViewRibbonGroupDescriptorProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.LayoutRibbonGroupDescriptorProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.PaneViewRibbonGroupDescriptorProvider" />
   </Extension>
   <Extension Point="Menu.ItemDescriptorProvider">
-    <instance class="Lusa.UI.MainPanel.ViewTab.Layout.LoadLayoutItemProvider" />
-    <instance class="Lusa.UI.MainPanel.ViewTab.Layout.ResetLayoutItemProvider" />
-    <instance class="Lusa.UI.MainPanel.ViewTab.Layout.SaveLayoutItemProvider" />
-    <instance class="Lusa.UI.MainPanel.ViewTab.View.PanViewsItemProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.Layout.LoadLayoutItemProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.Layout.ResetLayoutItemProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.Layout.SaveLayoutItemProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.View.PanViewsItemProvider" />
   </Extension>
   <BundleInfo Category="CommonUI" Description="the basic dock panel provider. All the pane views are dependent on it." />
 </Bundle>

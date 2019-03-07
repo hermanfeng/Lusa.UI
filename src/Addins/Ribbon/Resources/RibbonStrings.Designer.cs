@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IGRibbon.Resources {
-    using System;
-    
-    
+namespace Lusa.UI.Ribbon.Resources {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>

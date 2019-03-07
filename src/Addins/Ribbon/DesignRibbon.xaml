@@ -1,0 +1,195 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+               xmlns:System="clr-namespace:System;assembly=mscorlib"
+               xmlns:igRibbon="http://infragistics.com/Ribbon"
+               xmlns:controls="http://infragistics.com/Windows"
+               xmlns:converters="clr-namespace:Infragistics.Windows.Converters;assembly=InfragisticsWPF4.v13.2"
+               xmlns:igPrim="http://schemas.infragistics.com/xaml/primitives"
+               xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:Custom="http://infragistics.com/Themes"
+             xmlns:resources="clr-namespace:Lusa.UI.Ribbon.Resources"
+             x:Class="Lusa.UI.Ribbon.DesignRibbon"
+               mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" x:Name="Ribbon" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Assets/Global.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <resources:RibbonStrings x:Key="RibbonStrings" />
+
+            <SolidColorBrush x:Key="mouseOverStateStroke" Color="#222"/>
+            <SolidColorBrush x:Key="mouseOverStateBackground" Color="#2DA4D7"/>
+            <SolidColorBrush x:Key="pressedState" Color="#FF003366"/>
+            <SolidColorBrush x:Key="pressedStateBackground" Color="#2B8FBB"/>
+            <SolidColorBrush x:Key="disabledState" Color="#666"/>
+            <SolidColorBrush x:Key="normalState" Color="WhiteSmoke"/>
+            <Style x:Key="XamRibbonStyle1" TargetType="{x:Type igRibbon:XamRibbon}">
+                <Setter Property="ApplicationAccentColor" Value="#FF2686AE"/>
+                <Style.BasedOn>
+                    <Style TargetType="{x:Type igRibbon:XamRibbon}">
+                        <Setter Property="FontSize" Value="11"/>
+                        <Setter Property="VerticalAlignment" Value="Top"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type igRibbon:XamRibbon}">
+                                    <AdornerDecorator>
+                                        <Grid x:Name="rootVisual">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="0"/>
+                                                <RowDefinition Height="Auto" MinHeight="30"/>
+                                                <RowDefinition x:Name="tabContentRow" Height="*"/>
+                                                <RowDefinition x:Name="qatBelowRow" Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <igRibbon:ScenicRibbonCaptionArea x:Name="PART_XamRibbonCaption" Grid.ColumnSpan="3" Height="Auto" IsWithinRibbonWindow="{TemplateBinding IsWithinRibbonWindow}" Style="{DynamicResource ScenicRibbonCaptionAreaStyle1}"/>
+                                            <Control x:Name="captionButtonArea" Grid.Column="2" Focusable="False" Template="{DynamicResource {ComponentResourceKey ResourceId=CaptionButtonAreaTemplate, TypeInTargetAssembly={x:Type igRibbon:XamRibbon}}}" Visibility="Collapsed" VerticalAlignment="Top"/>
+                                            <igRibbon:RibbonCaptionPanel x:Name="PART_RibbonCaptionPanel" Grid.Column="1" Margin="{TemplateBinding CaptionPanelMargin}" Grid.Row="0" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local"/>
+                                            <Rectangle x:Name="minimizedRibbonBorder" Grid.ColumnSpan="3" Fill="{DynamicResource RibbonBrushKeys.ContainerBorderFillKey}" Height="1" Margin="{TemplateBinding TabAreaMargin}" Grid.Row="1" Grid.RowSpan="2" Visibility="Collapsed" VerticalAlignment="Bottom"/>
+                                            <ContentControl x:Name="PART_RibbonTabControlSite" Grid.ColumnSpan="3" Grid.Column="0" Focusable="False" HorizontalContentAlignment="Stretch" Margin="{TemplateBinding TabAreaMargin}" Grid.Row="1" Grid.RowSpan="2" TabIndex="0" KeyboardNavigation.TabNavigation="Local" VerticalContentAlignment="Stretch"/>
+                                            <Border x:Name="PART_WindowIcon" Background="Transparent" Grid.Column="0">
+                                                <Image x:Name="WindowIconIamge" Grid.Column="0" HorizontalAlignment="Left" Margin="6,0" Stretch="None" VerticalAlignment="Center"/>
+                                            </Border>
+                                            <ContentControl x:Name="PART_ApplicationMenuSite" Grid.ColumnSpan="2" Grid.Column="0" Focusable="False" HorizontalAlignment="Left" Margin="{TemplateBinding ApplicationMenuMargin}" Grid.Row="1" Grid.RowSpan="1" TabIndex="1" KeyboardNavigation.TabNavigation="Local" VerticalAlignment="Stretch"/>
+                                            <ContentControl x:Name="PART_QuickAccessToolbarBottomSite" Grid.ColumnSpan="3" Grid.Column="0" Focusable="False" Margin="{TemplateBinding QuickAccessToolbarMargin}" Grid.Row="3" TabIndex="3" KeyboardNavigation.TabNavigation="Local" Visibility="Collapsed"/>
+                                        </Grid>
+                                    </AdornerDecorator>
+                                    <ControlTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding IsWithinRibbonWindow, RelativeSource={RelativeSource Self}}" Value="True">
+                                            <Setter Property="Source" TargetName="WindowIconIamge" Value="{Binding IconResolved, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type igRibbon:RibbonWindowContentHost}}}"/>
+                                        </DataTrigger>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition Binding="{Binding IsWithinRibbonWindow, RelativeSource={RelativeSource Self}}" Value="True"/>
+                                                <Condition Binding="{Binding (igRibbon:XamRibbon.IsGlassActive), RelativeSource={RelativeSource Self}}" Value="True"/>
+                                                <Condition Binding="{Binding IsOffice2013Theme, RelativeSource={RelativeSource Self}}" Value="False"/>
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter Property="Background" TargetName="PART_XamRibbonCaption" Value="Transparent"/>
+                                            <Setter Property="Visibility" TargetName="captionButtonArea" Value="Hidden"/>
+                                        </MultiDataTrigger>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition Binding="{Binding IsWithinRibbonWindow, RelativeSource={RelativeSource Self}}" Value="True"/>
+                                                <Condition Binding="{Binding (igRibbon:XamRibbon.IsGlassActive), RelativeSource={RelativeSource Self}}" Value="False"/>
+                                                <Condition Binding="{Binding IsActive, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type Window}}}" Value="False"/>
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter Property="Background" TargetName="PART_XamRibbonCaption" Value="{DynamicResource RibbonBrushKeys.ScenicCaptionAreaInactiveFillKey}"/>
+                                        </MultiDataTrigger>
+                                        <Trigger Property="QuickAccessToolbarLocation" Value="BelowRibbon">
+                                            <Setter Property="Visibility" TargetName="PART_QuickAccessToolbarBottomSite" Value="Visible"/>
+                                        </Trigger>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition Binding="{Binding IsWithinRibbonWindow, RelativeSource={RelativeSource Self}}" Value="True"/>
+                                                <Condition Binding="{Binding (igRibbon:XamRibbon.IsGlassActive), RelativeSource={RelativeSource Self}}" Value="False"/>
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter Property="Visibility" TargetName="captionButtonArea" Value="Visible"/>
+                                        </MultiDataTrigger>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition Binding="{Binding IsWithinRibbonWindow, RelativeSource={RelativeSource Self}}" Value="True"/>
+                                                <Condition Binding="{Binding IsOffice2013Theme, RelativeSource={RelativeSource Self}}" Value="True"/>
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter Property="Visibility" TargetName="captionButtonArea" Value="Visible"/>
+                                        </MultiDataTrigger>
+                                        <Trigger Property="IsWithinRibbonWindow" Value="False">
+                                            <Setter Property="Background" TargetName="PART_XamRibbonCaption" Value="{DynamicResource RibbonBrushKeys.CaptionPanelFillKey}"/>
+                                        </Trigger>
+                                        <Trigger Property="IsMinimized" Value="True">
+                                            <Setter Property="Height" TargetName="tabContentRow" Value="0"/>
+                                            <Setter Property="Visibility" TargetName="minimizedRibbonBorder" Value="Visible"/>
+                                        </Trigger>
+                                        <Trigger Property="AutoHideState" Value="Hidden">
+                                            <Setter Property="Visibility" TargetName="rootVisual" Value="Collapsed"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Style.BasedOn>
+            </Style>
+        </ResourceDictionary>
+        
+    </UserControl.Resources>
+	<Grid igRibbon:ApplicationMenu2010.IsConstrainingElement="True">
+		<igRibbon:XamRibbon x:Name="myRibbon" ApplicationAccentColor="Green" Theme="IGTheme" IsMinimized="True" IsManipulationEnabled="True" AutoHideEnabled="True" Style="{DynamicResource XamRibbonStyle1}" >
+			<igRibbon:XamRibbon.QuickAccessToolbar>
+				<igRibbon:QuickAccessToolbar x:Name="quickAccessToolbar"/>
+			</igRibbon:XamRibbon.QuickAccessToolbar>
+			<igRibbon:XamRibbon.ApplicationMenu>
+				<igRibbon:ApplicationMenu x:Name="applicationMenu"
+					Image="/Lusa.UI.Ribbon;component/Images/xamRibbonDefaultApplicationIcon.png"
+					RecentItemsHeader="{Binding Shared_ApplicationMenu_RecentItems_Header, Source={StaticResource RibbonStrings}}"
+                    >
+					<!--<igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_Button_New, Source={StaticResource RibbonStrings}}"
+                                         LargeImage="/Lusa.UI.Ribbon;component/Images/New_Large.png"/>
+                    <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_Button_Open, Source={StaticResource RibbonStrings}}"
+                                         LargeImage="/Lusa.UI.Ribbon;component/Images/Open_Large.png"/>
+                    <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_Button_Save, Source={StaticResource RibbonStrings}}"
+                                         LargeImage="/Lusa.UI.Ribbon;component/Images/Save_Large.png"
+                                         IsEnabled="{Binding ElementName=editorWindow,Path=IsDocumentOpen}"/>
+                    <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_Button_Close, Source={StaticResource RibbonStrings}}"
+                                         LargeImage="/Lusa.UI.Ribbon;component/Images/Close_Large.png"
+                                         IsEnabled="{Binding ElementName=editorWindow,Path=IsDocumentOpen}"/>
+                    <igRibbon:SeparatorTool/>
+                    <igRibbon:MenuTool Caption="{Binding Shared_ApplicationMenu_MenuTool_Theme, Source={StaticResource RibbonStrings}}"
+                                       ButtonType="DropDown" LargeImage="/Lusa.UI.Ribbon;component/Images/Theme_Large.png">
+                        <igRibbon:LabelTool Caption="{Binding Shared_ApplicationMenu_ThemeSelector_Description,
+                            Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:RadioButtonTool
+                            Caption="{Binding Shared_ApplicationMenu_ThemeSelector_Blue, Source={StaticResource RibbonStrings}}"
+                            Tag="Office2k7Blue"
+                            LargeImage="/Lusa.UI.Ribbon;component/Images/Theme_Blue.png"
+                            igRibbon:MenuToolBase.MenuItemDescription="{Binding Shared_ApplicationMenu_ThemeSelector_Blue_Description,
+                            Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:RadioButtonTool
+                            Caption="{Binding Shared_ApplicationMenu_ThemeSelector_Black, Source={StaticResource RibbonStrings}}"
+                            Tag="Office2k7Black"
+                            IsChecked="True"
+                            LargeImage="/Lusa.UI.Ribbon;component/Images/Theme_Black.png"
+                            igRibbon:MenuToolBase.MenuItemDescription="{Binding Shared_ApplicationMenu_ThemeSelector_Black_Description,
+                            Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:RadioButtonTool
+                            Caption="{Binding Shared_ApplicationMenu_ThemeSelector_Silver, Source={StaticResource RibbonStrings}}"
+                            Tag="Office2k7Silver"
+                            LargeImage="/Lusa.UI.Ribbon;component/Images/Theme_Silver.png"
+                            igRibbon:MenuToolBase.MenuItemDescription="{Binding Shared_ApplicationMenu_ThemeSelector_Silver_Description,
+                            Source={StaticResource RibbonStrings}}"/>
+                    </igRibbon:MenuTool>
+                    <igRibbon:ApplicationMenu.RecentItems>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item1, Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item2, Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item3, Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item4, Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item5, Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item6, Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item7, Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item8, Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item9, Source={StaticResource RibbonStrings}}"/>
+                        <igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_RecentItems_Item10, Source={StaticResource RibbonStrings}}"/>
+                    </igRibbon:ApplicationMenu.RecentItems>-->
+					<igRibbon:ApplicationMenu.FooterToolbar>
+						<igRibbon:ApplicationMenuFooterToolbar>
+							<igRibbon:ButtonTool Caption="{Binding Shared_ApplicationMenu_Button_Exit, Source={StaticResource RibbonStrings}}"/>
+						</igRibbon:ApplicationMenuFooterToolbar>
+					</igRibbon:ApplicationMenu.FooterToolbar>
+				</igRibbon:ApplicationMenu>
+			</igRibbon:XamRibbon.ApplicationMenu>
+
+
+			<igRibbon:XamRibbon.TabItemAreaToolbar>
+				<igRibbon:TabItemAreaToolbar x:Name="tabItemAreaToolbar" TabItemAreaMinWidth="150"/>
+			</igRibbon:XamRibbon.TabItemAreaToolbar>
+		</igRibbon:XamRibbon>
+
+	</Grid>
+</UserControl>
