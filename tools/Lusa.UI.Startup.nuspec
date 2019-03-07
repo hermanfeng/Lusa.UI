@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Lusa.UI.Startup</id>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <title></title>
     <authors>Lusa</authors>
     <owners>Lusa</owners>
@@ -11,15 +11,15 @@
 	This package will provide the startup app and plugins in debug folder, such as include dock panel, output pane view. To use this package, please create a wpf app project first.
 	</description>
     <language>en-US</language>
-	<frameworkAssemblies>
+    <frameworkAssemblies>
       <frameworkAssembly assemblyName="System.Windows.Forms" />
       <frameworkAssembly assemblyName="System.Configuration" />
-   </frameworkAssemblies>
+    </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="..\src\bin\*.dll" target="lib\net461"/>
-	<file src="..\src\bin\*.pdb" target="lib\net461"/>
-	<file src=".\app\**" target="content\net461"/>
-	<file src="..\src\bin\Plugins\**" target="content\net461\bin\debug\Plugins"/>
+    <file src="..\src\bin\*.dll" target="lib\net461" />
+    <file src="..\src\bin\*.pdb" target="lib\net461" />
+    <file src=".\app\**" target="content\net461" />
+    <file src="..\src\bin\Plugins\**" target="content\net461\bin\debug\Plugins" />
   </files>
 </package>

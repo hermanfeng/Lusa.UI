@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Lusa.UI.Host</id>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <title></title>
     <authors>Lusa</authors>
     <owners>Lusa</owners>
@@ -13,6 +13,6 @@
     <language>en-US</language>
   </metadata>
   <files>
-    <file src="..\src\bin\**" target="content\net461\Host"/>
+    <file src="..\src\bin\**" target="content\net461\Host" />
   </files>
 </package>
