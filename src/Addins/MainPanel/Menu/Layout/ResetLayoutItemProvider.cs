@@ -12,12 +12,13 @@ namespace Lusa.UI.MainPanel.Menu.Layout
         {
             this.MenuItem = new MenuItemDescriptor()
             {
+                Id = "ResetLayout",
                 Name = "Reset",
                 GroupId = "TView.Layout", 
                 Location = MenuItemLocation.TabMenu,
                 ContentType = typeof(ButtonTool),
                 Command = ViewCommands.ResetLayout,
-                ImageUrl = "/images/layout/reset.png"
+                ImageUrl = "/images/reset.png"
             };
         }
     }

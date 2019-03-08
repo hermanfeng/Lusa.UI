@@ -23,12 +23,16 @@
   </Extension>
   <Extension Point="Menu.GroupDescriptorProvider">
     <instance class="Lusa.UI.MainPanel.Menu.LayoutRibbonGroupDescriptorProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.UserSettingsRibbonGroupDescriptorProvider" />
     <instance class="Lusa.UI.MainPanel.Menu.PaneViewRibbonGroupDescriptorProvider" />
   </Extension>
   <Extension Point="Menu.ItemDescriptorProvider">
     <instance class="Lusa.UI.MainPanel.Menu.Layout.LoadLayoutItemProvider" />
     <instance class="Lusa.UI.MainPanel.Menu.Layout.ResetLayoutItemProvider" />
     <instance class="Lusa.UI.MainPanel.Menu.Layout.SaveLayoutItemProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.UserSettings.LoadUserSettingsItemProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.UserSettings.SaveAsUserSettingsItemProvider" />
+    <instance class="Lusa.UI.MainPanel.Menu.UserSettings.SaveUserSettingsItemProvider" />
     <instance class="Lusa.UI.MainPanel.Menu.View.PanViewsItemProvider" />
   </Extension>
   <BundleInfo Category="CommonUI" Description="the basic dock panel provider. All the pane views are dependent on it." />

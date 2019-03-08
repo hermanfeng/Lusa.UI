@@ -97,12 +97,13 @@
     <Compile Include="Dock\MainDockPanel.xaml.cs">
       <DependentUpon>MainDockPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dock\View\UserSettings.xaml.cs">
-      <DependentUpon>UserSettings.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Dock\View\Output.xaml.cs">
       <DependentUpon>Output.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Menu\UserSettings\SaveAsUserSettingsItemProvider.cs" />
+    <Compile Include="Menu\UserSettings\SaveUserSettingsItemProvider.cs" />
+    <Compile Include="Menu\UserSettings\UserSettingsRibbonGroupDescriptorProvider.cs" />
+    <Compile Include="Menu\UserSettings\LoadUserSettingsItemProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -120,7 +121,7 @@
     <Compile Include="StatusBarItem\ProgressItem.xaml.cs">
       <DependentUpon>ProgressItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Menu\LayoutRibbonGroupDescriptorProvider.cs" />
+    <Compile Include="Menu\Layout\LayoutRibbonGroupDescriptorProvider.cs" />
     <Compile Include="Menu\Layout\LoadLayoutItemProvider.cs" />
     <Compile Include="Menu\Layout\ResetLayoutItemProvider.cs" />
     <Compile Include="Menu\Layout\SaveLayoutItemProvider.cs" />
@@ -151,10 +152,6 @@
     <Page Include="Dock\MainDockPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Dock\View\UserSettings.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Dock\View\Output.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -190,6 +187,7 @@
     <Resource Include="Images\Layout\reset.png" />
     <Resource Include="Images\Layout\save.png" />
     <Resource Include="Images\Layout\load.png" />
+    <Resource Include="Images\openfile.png" />
     <Content Include="Images\Output\01.png" />
     <Content Include="Images\Output\02.png" />
     <Content Include="Images\Output\03.png" />
@@ -201,6 +199,10 @@
     <Resource Include="Images\refresh.png" />
     <Resource Include="Images\save_16x16.png" />
     <Resource Include="Images\server.png" />
+    <Resource Include="Images\SaveAs_16x16.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\saveas.png" />
+    <Resource Include="Images\reset.png" />
     <Content Include="Images\ServerExplorer\database_connect.png" />
     <Content Include="Images\ServerExplorer\database_connect_white.png" />
     <Content Include="Images\ServerExplorer\event_log.png" />
@@ -292,6 +294,7 @@
     <Content Include="Images\Toolbox\timeline.png" />
     <Content Include="Images\Toolbox\treemapandpivotmap.png" />
     <Resource Include="Images\panviews.png" />
+    <Resource Include="Images\views.png" />
     <Content Include="Manifest.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -32,7 +32,18 @@ namespace Lusa.UI.MainPanel.Dock
             Infragistics.Themes.ThemeManager.ApplicationTheme = new Infragistics.Themes.IgTheme();
             InitializeComponent();
             _dockManager = DockManager;
+            Application.Current.Exit += Current_Exit;
         }
+
+        private void Current_Exit(object sender, ExitEventArgs e)
+        {
+            var layoutpath = FileService.Instance.EnsureAbsolutePath(LayoutPath);
+            FileService.Instance.WriteContent(LayoutPath, this.DockManager.SaveLayout());
+
+            var path = FileService.Instance.EnsureAbsolutePath(UISettingDataPath);
+            SavePanSetting(path);
+        }
+
 
         void DesignerDockPanel_Loaded(object sender, RoutedEventArgs e)
         {

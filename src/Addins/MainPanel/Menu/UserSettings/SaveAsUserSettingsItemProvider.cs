@@ -3,22 +3,22 @@ using Lusa.AddinEngine.ElementOrder;
 using Lusa.UI.WorkBenchContract.Commands;
 using Lusa.UI.WorkBenchContract.Controls.Menu;
 
-namespace Lusa.UI.MainPanel.Menu.Layout
+namespace Lusa.UI.MainPanel.Menu.UserSettings
 {
     [ElementOrder(20)]
-    public class LoadLayoutItemProvider : DefaultMenuItemDescriptorProvider
+    public class SaveAsUserSettingsItemProvider : DefaultMenuItemDescriptorProvider
     {
-        public LoadLayoutItemProvider()
+        public SaveAsUserSettingsItemProvider()
         {
             this.MenuItem = new MenuItemDescriptor()
             {
-                Id = "LoadLayout",
-                Name = "Load",
-                GroupId = "TView.Layout", 
+                Id = "SaveAsSettings",
+                Name = "SaveAs",
+                GroupId = "TView.UserSettings", 
                 Location = MenuItemLocation.TabMenu,
                 ContentType = typeof(ButtonTool),
-                //Command = ViewCommands.LoadLayout,
-                ImageUrl = "/images/openfile.png"
+                Command = ViewCommands.SaveAsSettings,
+                ImageUrl = "/images/saveas.png"
             };
         }
     }

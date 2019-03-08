@@ -11,7 +11,7 @@
     <UserControl.Resources>
     </UserControl.Resources>
     <Grid>
-        <ribbon:MenuTool x:Name="Menu" Caption="AllViews" LargeImage="../../Images/panviews.png">
+        <ribbon:MenuTool x:Name="Menu" Caption="AllViews" LargeImage="../../Images/views.png">
         </ribbon:MenuTool>
         <!--<ComboBox x:Name="ComboEditor" HorizontalAlignment="Center" Width="100" VerticalAlignment="Center"/>-->
 

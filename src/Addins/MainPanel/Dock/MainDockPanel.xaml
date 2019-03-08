@@ -21,6 +21,9 @@
             <CommandBinding Command="commands:ViewCommands.SaveLayout" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
             <CommandBinding Command="commands:ViewCommands.LoadLayout" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
             <CommandBinding Command="commands:ViewCommands.ResetLayout" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
+            <CommandBinding Command="commands:ViewCommands.LoadSetings" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
+            <CommandBinding Command="commands:ViewCommands.SaveSettings" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
+            <CommandBinding Command="commands:ViewCommands.SaveAsSettings" Executed="CommandBinding_OnExecuted" CanExecute="CommandBinding_OnCanExecute"></CommandBinding>
         </Grid.CommandBindings>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>

@@ -1,4 +1,4 @@
-﻿using Lusa.UI.WorkBenchContract.UI.Controls.Pane;
+﻿using Lusa.UI.WorkBenchContract.Controls.Pane;
 
 namespace $rootnamespace$
 {

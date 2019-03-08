@@ -12,7 +12,7 @@ namespace Lusa.UI.MainPanel.Menu.View
                 GroupId = "TView.PaneView", 
                 Location = MenuItemLocation.TabMenu,
                 ContentType = typeof(PaneViewsComboBoxTool),
-                ImageUrl = "/images/panviews.png"
+                ImageUrl = "/images/views.png"
             };
         }
     }
