@@ -72,12 +72,6 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="UIShell.iOpenWorks.Bootstrapper">
-      <HintPath>..\Lib\UIShell\UIShell.iOpenWorks.Bootstrapper.dll</HintPath>
-    </Reference>
-    <Reference Include="UIShell.iOpenWorks.BundleRepository">
-      <HintPath>..\Lib\UIShell\UIShell.iOpenWorks.BundleRepository.dll</HintPath>
-    </Reference>
     <Reference Include="UIShell.OSGi">
       <HintPath>..\Lib\UIShell\UIShell.OSGi.dll</HintPath>
     </Reference>
