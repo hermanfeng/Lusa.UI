@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Configuration;
 using System.Diagnostics;
 using System.Windows;
 using Lusa.AddinEngine;
 using Lusa.UI.Msic.MessageService;
 using Lusa.UI.WorkBenchContract;
-using UIShell.iOpenWorks.Bootstrapper;
 using UIShell.OSGi;
 using UIShell.OSGi.Logging;
 using UIShell.OSGi.Utility;
