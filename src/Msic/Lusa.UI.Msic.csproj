@@ -57,7 +57,9 @@
     <Compile Include="ConfigrationService\ConfigrationService.cs" />
     <Compile Include="ConfigrationService\IConfigrationServiceExtension.cs" />
     <Compile Include="ConfigrationService\IConfigrationService.cs" />
-    <Compile Include="DataProtectService\DataProtectService.cs" />
+    <Compile Include="DataProtectService\DefaultDataProtectService.cs" />
+    <Compile Include="DataProtectService\DataProtectServiceExtension.cs" />
+    <Compile Include="DataProtectService\IDataProtectService.cs" />
     <Compile Include="MessageService\DefaultMessageAssistant.cs" />
     <Compile Include="MessageService\IMessageServiceExtension.cs" />
     <Compile Include="MessageService\IMessageAssistant.cs" />
